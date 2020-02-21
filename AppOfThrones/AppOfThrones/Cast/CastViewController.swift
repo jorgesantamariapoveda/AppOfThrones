@@ -1,5 +1,5 @@
 //
-//  RateViewController.swift
+//  CastViewController.swift
 //  AppOfThrones
 //
 //  Created by Jorge on 21/02/2020.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class RateViewController: UIViewController {
+class CastViewController: UIViewController {
 
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.blue
+        self.view.backgroundColor = UIColor.cyan
     }
-
+    
 }

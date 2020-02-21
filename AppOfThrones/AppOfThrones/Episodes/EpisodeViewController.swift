@@ -14,5 +14,9 @@ class EpisodeViewController: UIViewController {
         Episode.init(id: 1, name: "Name1", date: "Date1", image: "imagen1", episode: 1, season: 1, overview: "overview1"),
         Episode.init(id: 2, name: "Name2", date: "Date2", image: "imagen2", episode: 2, season: 2, overview: "overview2")
     ]
+
+    override func viewDidLoad() {
+        self.view.backgroundColor = UIColor.red
+    }
     
 }

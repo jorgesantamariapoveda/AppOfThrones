@@ -19,8 +19,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-        let rootViewController = EpisodeViewController()
+        // ViewControllers de la app
+        let episodeViewController = EpisodeViewController()
+        let castViewController = CastViewController()
+        let housesViewController = HouseViewController()
+        let favoritesViewController = FavoritesViewController()
+        let settingsViewController = SettingsViewController()
 
+        episodeViewController.tabBarItem = UITabBarItem(title: "Seasons", image: nil, tag: 1)
+        castViewController.tabBarItem = UITabBarItem(title: "Cast", image: nil, tag: 2)
+        housesViewController.tabBarItem = UITabBarItem(title: "Houses", image: nil, tag: 3)
+        favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: nil, tag: 4)
+        settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 5)
+
+        // Configuración navegación
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [
+                                        episodeViewController,
+                                        castViewController,
+                                        housesViewController,
+                                        favoritesViewController,
+                                        settingsViewController
+        ]
+        tabBarController.tabBar.barStyle = UIBarStyle.black
+        tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.tintColor = UIColor(displayP3Red: 235/255.0, green: 172/255.0, blue: 38/255.0, alpha: 1.0)
+
+        let rootViewController = tabBarController
+
+        // Se configura window
         window = UIWindow.init(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = rootViewController
