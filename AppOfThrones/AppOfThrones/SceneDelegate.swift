@@ -32,12 +32,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "heart.fill"), tag: 4)
         settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 5)
 
+        // Se crean NavigationController donde sea necesario
+        let episodeNavigationController = UINavigationController(rootViewController: episodeViewController)
+        let castNavigationController = UINavigationController(rootViewController: castViewController)
+        let housesNavigationController = UINavigationController(rootViewController: housesViewController)
+
         // Configuración navegación
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [
-                                        episodeViewController,
-                                        castViewController,
-                                        housesViewController,
+                                        episodeNavigationController,
+                                        castNavigationController,
+                                        housesNavigationController,
                                         favoritesViewController,
                                         settingsViewController
         ]

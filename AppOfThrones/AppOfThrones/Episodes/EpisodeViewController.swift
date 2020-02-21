@@ -18,5 +18,12 @@ class EpisodeViewController: UIViewController {
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.red
     }
+
+    // MARK: - IBAction
     
+    @IBAction func fireRate(_ sender: UIButton) {
+        let rateViewController = RateViewController()
+        //self.present(rateViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(rateViewController, animated: true)
+    }
 }

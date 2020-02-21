@@ -14,4 +14,8 @@ class RateViewController: UIViewController {
         self.view.backgroundColor = UIColor.blue
     }
 
+    @IBAction func fireClose(_ sender: UIButton) {
+        //self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
 }
