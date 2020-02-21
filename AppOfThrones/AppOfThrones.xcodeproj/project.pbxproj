@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		CFB37E3B2400555000407010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E3A2400555000407010 /* AppDelegate.swift */; };
 		CFB37E3D2400555000407010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E3C2400555000407010 /* SceneDelegate.swift */; };
-		CFB37E3F2400555000407010 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E3E2400555000407010 /* ViewController.swift */; };
 		CFB37E442400555200407010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E432400555200407010 /* Assets.xcassets */; };
 		CFB37E472400555200407010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E452400555200407010 /* LaunchScreen.storyboard */; };
+		CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E4E24005BBB00407010 /* RateViewController.swift */; };
+		CFB37E5124005BDA00407010 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E5024005BDA00407010 /* RateViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CFB37E372400555000407010 /* AppOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB37E3A2400555000407010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB37E3C2400555000407010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFB37E3E2400555000407010 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFB37E432400555200407010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFB37E462400555200407010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFB37E482400555200407010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB37E4E24005BBB00407010 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		CFB37E5024005BDA00407010 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 			children = (
 				CFB37E3A2400555000407010 /* AppDelegate.swift */,
 				CFB37E3C2400555000407010 /* SceneDelegate.swift */,
-				CFB37E3E2400555000407010 /* ViewController.swift */,
 				CFB37E432400555200407010 /* Assets.xcassets */,
 				CFB37E452400555200407010 /* LaunchScreen.storyboard */,
 				CFB37E482400555200407010 /* Info.plist */,
+				CFB37E4E24005BBB00407010 /* RateViewController.swift */,
+				CFB37E5024005BDA00407010 /* RateViewController.xib */,
 			);
 			path = AppOfThrones;
 			sourceTree = "<group>";
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB37E5124005BDA00407010 /* RateViewController.xib in Resources */,
 				CFB37E472400555200407010 /* LaunchScreen.storyboard in Resources */,
 				CFB37E442400555200407010 /* Assets.xcassets in Resources */,
 			);
@@ -134,8 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB37E3F2400555000407010 /* ViewController.swift in Sources */,
 				CFB37E3B2400555000407010 /* AppDelegate.swift in Sources */,
+				CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */,
 				CFB37E3D2400555000407010 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
