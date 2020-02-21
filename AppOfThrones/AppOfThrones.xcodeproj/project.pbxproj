@@ -13,6 +13,8 @@
 		CFB37E472400555200407010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E452400555200407010 /* LaunchScreen.storyboard */; };
 		CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E4E24005BBB00407010 /* RateViewController.swift */; };
 		CFB37E5124005BDA00407010 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E5024005BDA00407010 /* RateViewController.xib */; };
+		CFB37E542400638100407010 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E532400638100407010 /* EpisodeViewController.swift */; };
+		CFB37E562400639D00407010 /* EpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E552400639D00407010 /* EpisodeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CFB37E482400555200407010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFB37E4E24005BBB00407010 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		CFB37E5024005BDA00407010 /* RateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
+		CFB37E532400638100407010 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		CFB37E552400639D00407010 /* EpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		CFB37E392400555000407010 /* AppOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				CFB37E522400631F00407010 /* Episodes */,
 				CFB37E3A2400555000407010 /* AppDelegate.swift */,
 				CFB37E3C2400555000407010 /* SceneDelegate.swift */,
 				CFB37E432400555200407010 /* Assets.xcassets */,
 				CFB37E452400555200407010 /* LaunchScreen.storyboard */,
 				CFB37E482400555200407010 /* Info.plist */,
+			);
+			path = AppOfThrones;
+			sourceTree = "<group>";
+		};
+		CFB37E522400631F00407010 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				CFB37E532400638100407010 /* EpisodeViewController.swift */,
+				CFB37E552400639D00407010 /* EpisodeViewController.xib */,
 				CFB37E4E24005BBB00407010 /* RateViewController.swift */,
 				CFB37E5024005BDA00407010 /* RateViewController.xib */,
 			);
-			path = AppOfThrones;
+			path = Episodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,7 @@
 			files = (
 				CFB37E5124005BDA00407010 /* RateViewController.xib in Resources */,
 				CFB37E472400555200407010 /* LaunchScreen.storyboard in Resources */,
+				CFB37E562400639D00407010 /* EpisodeViewController.xib in Resources */,
 				CFB37E442400555200407010 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +155,7 @@
 			files = (
 				CFB37E3B2400555000407010 /* AppDelegate.swift in Sources */,
 				CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */,
+				CFB37E542400638100407010 /* EpisodeViewController.swift in Sources */,
 				CFB37E3D2400555000407010 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
