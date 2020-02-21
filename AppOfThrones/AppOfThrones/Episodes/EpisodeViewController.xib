@@ -16,9 +16,32 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RWp-t1-63V">
+                    <rect key="frame" x="20" y="44" width="374" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="eNz-Jr-PEe"/>
+                    </constraints>
+                    <segments>
+                        <segment title="1"/>
+                        <segment title="2"/>
+                        <segment title="3"/>
+                        <segment title="4"/>
+                        <segment title="5"/>
+                        <segment title="6"/>
+                        <segment title="7"/>
+                        <segment title="8"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RWp-t1-63V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="658-sv-2VA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RWp-t1-63V" secondAttribute="trailing" constant="20" id="BUL-uM-Ni1"/>
+                <constraint firstItem="RWp-t1-63V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bkq-IU-zyA"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="133" y="154"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
 </document>
