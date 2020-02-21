@@ -26,11 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let favoritesViewController = FavoritesViewController()
         let settingsViewController = SettingsViewController()
 
-        episodeViewController.tabBarItem = UITabBarItem(title: "Seasons", image: nil, tag: 1)
-        castViewController.tabBarItem = UITabBarItem(title: "Cast", image: nil, tag: 2)
-        housesViewController.tabBarItem = UITabBarItem(title: "Houses", image: nil, tag: 3)
-        favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: nil, tag: 4)
-        settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: nil, tag: 5)
+        episodeViewController.tabBarItem = UITabBarItem(title: "Seasons", image: UIImage(systemName: "film.fill"), tag: 1)
+        castViewController.tabBarItem = UITabBarItem(title: "Cast", image: UIImage(systemName: "person.3.fill"), tag: 2)
+        housesViewController.tabBarItem = UITabBarItem(title: "Houses", image: UIImage(systemName: "shield.lefthalf.fill"), tag: 3)
+        favoritesViewController.tabBarItem = UITabBarItem(title: "Favorites", image: UIImage(systemName: "heart.fill"), tag: 4)
+        settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 5)
 
         // Configuración navegación
         let tabBarController = UITabBarController()
