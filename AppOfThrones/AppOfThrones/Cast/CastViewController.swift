@@ -11,6 +11,9 @@ import UIKit
 class CastViewController: UIViewController {
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.title = "Cast"
         self.view.backgroundColor = UIColor.cyan
     }
     

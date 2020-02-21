@@ -18,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvh-5m-hd6">
-                    <rect key="frame" x="20" y="54" width="22" height="22"/>
+                    <rect key="frame" x="0.0" y="54" width="54" height="54"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="22" id="pCZ-wx-Ajx"/>
-                        <constraint firstAttribute="height" constant="22" id="rlq-v6-F7U"/>
+                        <constraint firstAttribute="width" constant="54" id="pCZ-wx-Ajx"/>
+                        <constraint firstAttribute="height" constant="54" id="rlq-v6-F7U"/>
                     </constraints>
                     <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" image="xmark.circle.fill" catalog="system"/>
@@ -33,7 +33,7 @@
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
                 <constraint firstItem="jvh-5m-hd6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="I4T-yx-m6A"/>
-                <constraint firstItem="jvh-5m-hd6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="uXC-9E-Bug"/>
+                <constraint firstItem="jvh-5m-hd6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uXC-9E-Bug"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="133" y="154"/>

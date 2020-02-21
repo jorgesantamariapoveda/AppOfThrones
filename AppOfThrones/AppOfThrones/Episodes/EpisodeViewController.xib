@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="rateButton" destination="epC-1d-Rmg" id="4xj-AS-ab5"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uhX-jm-f38"/>
             </connections>
         </placeholder>
@@ -18,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RWp-t1-63V">
-                    <rect key="frame" x="20" y="44" width="374" height="32"/>
+                    <rect key="frame" x="20" y="64" width="374" height="32"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="31" id="eNz-Jr-PEe"/>
                     </constraints>
@@ -34,13 +35,16 @@
                     </segments>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epC-1d-Rmg">
-                    <rect key="frame" x="151" y="808" width="112" height="44"/>
+                    <rect key="frame" x="151" y="798" width="112" height="44"/>
                     <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="112" id="TeN-KD-hrq"/>
                         <constraint firstAttribute="height" constant="44" id="bvO-J3-4XT"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="RATE">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
                     <connections>
                         <action selector="fireRate:" destination="-1" eventType="touchUpInside" id="3kb-oc-EsX"/>
                     </connections>
@@ -50,8 +54,8 @@
             <constraints>
                 <constraint firstItem="epC-1d-Rmg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="151" id="1pL-UC-W16"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="epC-1d-Rmg" secondAttribute="trailing" constant="151" id="419-3k-o0L"/>
-                <constraint firstItem="RWp-t1-63V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="658-sv-2VA"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="epC-1d-Rmg" secondAttribute="bottom" constant="10" id="9ac-nX-P9E"/>
+                <constraint firstItem="RWp-t1-63V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="658-sv-2VA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="epC-1d-Rmg" secondAttribute="bottom" constant="20" id="9ac-nX-P9E"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RWp-t1-63V" secondAttribute="trailing" constant="20" id="BUL-uM-Ni1"/>
                 <constraint firstItem="RWp-t1-63V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bkq-IU-zyA"/>
             </constraints>

@@ -11,6 +11,9 @@ import UIKit
 class HouseViewController: UIViewController {
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.title = "Houses"
         self.view.backgroundColor = UIColor.brown
     }
 
