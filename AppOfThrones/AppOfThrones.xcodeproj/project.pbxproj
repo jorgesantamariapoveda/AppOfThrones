@@ -26,6 +26,9 @@
 		CFB37E6D24006BF600407010 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E6C24006BF600407010 /* FavoritesViewController.xib */; };
 		CFFABACC24014682004E4E5C /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABACB24014682004E4E5C /* EpisodeTableViewCell.swift */; };
 		CFFABACE240146A6004E4E5C /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABACD240146A6004E4E5C /* EpisodeTableViewCell.xib */; };
+		CFFABAD0240159D8004E4E5C /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABACF240159D8004E4E5C /* CastTableViewCell.swift */; };
+		CFFABAD224015A0A004E4E5C /* CastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABAD124015A0A004E4E5C /* CastTableViewCell.xib */; };
+		CFFABAD424015D6E004E4E5C /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABAD324015D6E004E4E5C /* Cast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		CFB37E6C24006BF600407010 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		CFFABACB24014682004E4E5C /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		CFFABACD240146A6004E4E5C /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		CFFABACF240159D8004E4E5C /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
+		CFFABAD124015A0A004E4E5C /* CastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastTableViewCell.xib; sourceTree = "<group>"; };
+		CFFABAD324015D6E004E4E5C /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				CFB37E582400652600407010 /* Episode.swift */,
+				CFFABAD324015D6E004E4E5C /* Cast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +130,8 @@
 			children = (
 				CFB37E5C2400699D00407010 /* CastViewController.swift */,
 				CFB37E5E240069B600407010 /* CastViewController.xib */,
+				CFFABACF240159D8004E4E5C /* CastTableViewCell.swift */,
+				CFFABAD124015A0A004E4E5C /* CastTableViewCell.xib */,
 			);
 			path = Cast;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 			files = (
 				CFB37E5124005BDA00407010 /* RateViewController.xib in Resources */,
 				CFB37E6324006A1800407010 /* SettingsViewController.xib in Resources */,
+				CFFABAD224015A0A004E4E5C /* CastTableViewCell.xib in Resources */,
 				CFB37E472400555200407010 /* LaunchScreen.storyboard in Resources */,
 				CFB37E5F240069B600407010 /* CastViewController.xib in Resources */,
 				CFFABACE240146A6004E4E5C /* EpisodeTableViewCell.xib in Resources */,
@@ -235,8 +245,10 @@
 				CFB37E6B24006BDF00407010 /* FavoritesViewController.swift in Sources */,
 				CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */,
 				CFFABACC24014682004E4E5C /* EpisodeTableViewCell.swift in Sources */,
+				CFFABAD424015D6E004E4E5C /* Cast.swift in Sources */,
 				CFB37E61240069FF00407010 /* SettingsViewController.swift in Sources */,
 				CFB37E542400638100407010 /* EpisodeViewController.swift in Sources */,
+				CFFABAD0240159D8004E4E5C /* CastTableViewCell.swift in Sources */,
 				CFB37E592400652600407010 /* Episode.swift in Sources */,
 				CFB37E3D2400555000407010 /* SceneDelegate.swift in Sources */,
 				CFB37E5D2400699D00407010 /* CastViewController.swift in Sources */,
