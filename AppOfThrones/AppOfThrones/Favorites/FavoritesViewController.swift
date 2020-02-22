@@ -20,7 +20,6 @@ class FavoritesViewController: UIViewController {
 
     func setupUI() {
         self.title = "Favorites"
-        self.view.backgroundColor = UIColor.yellow
     }
 
 }

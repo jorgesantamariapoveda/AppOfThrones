@@ -39,7 +39,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="RWp-t1-63V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="658-sv-2VA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RWp-t1-63V" secondAttribute="trailing" constant="20" id="BUL-uM-Ni1"/>

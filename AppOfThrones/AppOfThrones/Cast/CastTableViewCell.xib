@@ -57,7 +57,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="46" id="Nxv-sS-QXQ"/>
                         </constraints>
-                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" image="heart" catalog="system"/>
                     </button>
                 </subviews>

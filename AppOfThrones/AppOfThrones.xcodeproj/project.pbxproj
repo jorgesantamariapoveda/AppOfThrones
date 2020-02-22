@@ -35,6 +35,7 @@
 		CFFABADC24017BE8004E4E5C /* HouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABADB24017BE8004E4E5C /* HouseTableViewCell.xib */; };
 		CFFABADE240185F8004E4E5C /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABADD240185F8004E4E5C /* HouseDetailViewController.swift */; };
 		CFFABAE0240186E9004E4E5C /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABADF240186E9004E4E5C /* HouseDetailViewController.xib */; };
+		CFFABAE224019A3A004E4E5C /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABAE124019A3A004E4E5C /* Rating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		CFFABADB24017BE8004E4E5C /* HouseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseTableViewCell.xib; sourceTree = "<group>"; };
 		CFFABADD240185F8004E4E5C /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		CFFABADF240186E9004E4E5C /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
+		CFFABAE124019A3A004E4E5C /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +110,10 @@
 				CFB37E5B2400692F00407010 /* Settings */,
 				CFB37E3A2400555000407010 /* AppDelegate.swift */,
 				CFB37E3C2400555000407010 /* SceneDelegate.swift */,
+				CFFABAD52401748B004E4E5C /* DataController.swift */,
 				CFB37E432400555200407010 /* Assets.xcassets */,
 				CFB37E452400555200407010 /* LaunchScreen.storyboard */,
 				CFB37E482400555200407010 /* Info.plist */,
-				CFFABAD52401748B004E4E5C /* DataController.swift */,
 			);
 			path = AppOfThrones;
 			sourceTree = "<group>";
@@ -135,6 +137,7 @@
 				CFB37E582400652600407010 /* Episode.swift */,
 				CFFABAD324015D6E004E4E5C /* Cast.swift */,
 				CFFABAD7240178AD004E4E5C /* House.swift */,
+				CFFABAE124019A3A004E4E5C /* Rating.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				CFFABADE240185F8004E4E5C /* HouseDetailViewController.swift in Sources */,
 				CFFABAD8240178AD004E4E5C /* House.swift in Sources */,
+				CFFABAE224019A3A004E4E5C /* Rating.swift in Sources */,
 				CFB37E3B2400555000407010 /* AppDelegate.swift in Sources */,
 				CFB37E6B24006BDF00407010 /* FavoritesViewController.swift in Sources */,
 				CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */,

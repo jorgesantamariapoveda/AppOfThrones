@@ -27,7 +27,6 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func setupUI() {
         self.title = "Episode"
-        self.view.backgroundColor = UIColor.red
 
         let nib = UINib(nibName: "EpisodeTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
@@ -61,6 +60,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as? EpisodeTableViewCell {
             let episode = episodes[indexPath.row]
             cell.setEpisode(episode)
+            cell.rateClousure = {
+                let rateVC = RateViewController.init(withEpisode: episode)
+                let navigationVC = UINavigationController.init(rootViewController: rateVC)
+                self.present(navigationVC, animated: true, completion: nil)
+            }
             return cell
         }
         fatalError("OHHHHHHHH")
@@ -75,6 +79,10 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Celda pulsada en sección \(indexPath.section) y fila \(indexPath.row)")
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false // Se desactiva el tap
     }
 
 }

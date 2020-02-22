@@ -20,7 +20,6 @@ class SettingsViewController: UIViewController {
 
     func setupUI() {
         self.title = "Settings"
-        self.view.backgroundColor = UIColor.purple
     }
 
 }
