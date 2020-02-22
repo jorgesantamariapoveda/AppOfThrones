@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HouseViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="1EO-cf-XtA" id="gjf-WM-wJg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="KSj-u5-QCq"/>
             </connections>
         </placeholder>
@@ -16,9 +17,21 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1EO-cf-XtA">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1EO-cf-XtA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2Zx-EV-C2u"/>
+                <constraint firstItem="1EO-cf-XtA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5rB-U4-PVa"/>
+                <constraint firstItem="1EO-cf-XtA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="G5C-pZ-gan"/>
+                <constraint firstItem="1EO-cf-XtA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="HxB-AV-79M"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="133" y="154"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
 </document>

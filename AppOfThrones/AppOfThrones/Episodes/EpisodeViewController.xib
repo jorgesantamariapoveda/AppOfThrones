@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
-                <outlet property="rateButton" destination="epC-1d-Rmg" id="4xj-AS-ab5"/>
+                <outlet property="tableView" destination="nXA-L0-ZnP" id="3d2-Ra-bID"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uhX-jm-f38"/>
             </connections>
         </placeholder>
@@ -34,30 +34,20 @@
                         <segment title="8"/>
                     </segments>
                 </segmentedControl>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epC-1d-Rmg">
-                    <rect key="frame" x="151" y="798" width="112" height="44"/>
-                    <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="112" id="TeN-KD-hrq"/>
-                        <constraint firstAttribute="height" constant="44" id="bvO-J3-4XT"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="RATE">
-                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="fireRate:" destination="-1" eventType="touchUpInside" id="3kb-oc-EsX"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nXA-L0-ZnP">
+                    <rect key="frame" x="0.0" y="119" width="414" height="743"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="epC-1d-Rmg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="151" id="1pL-UC-W16"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="epC-1d-Rmg" secondAttribute="trailing" constant="151" id="419-3k-o0L"/>
                 <constraint firstItem="RWp-t1-63V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="658-sv-2VA"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="epC-1d-Rmg" secondAttribute="bottom" constant="20" id="9ac-nX-P9E"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RWp-t1-63V" secondAttribute="trailing" constant="20" id="BUL-uM-Ni1"/>
+                <constraint firstItem="nXA-L0-ZnP" firstAttribute="top" secondItem="RWp-t1-63V" secondAttribute="bottom" constant="24" id="DCN-4O-fhH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nXA-L0-ZnP" secondAttribute="trailing" id="PU8-0z-388"/>
+                <constraint firstItem="nXA-L0-ZnP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XJp-S8-sgc"/>
                 <constraint firstItem="RWp-t1-63V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bkq-IU-zyA"/>
+                <constraint firstItem="nXA-L0-ZnP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="kaL-i6-DxO"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>

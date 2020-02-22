@@ -24,6 +24,8 @@
 		CFB37E6824006B6800407010 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E6724006B6800407010 /* HouseViewController.xib */; };
 		CFB37E6B24006BDF00407010 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E6A24006BDF00407010 /* FavoritesViewController.swift */; };
 		CFB37E6D24006BF600407010 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E6C24006BF600407010 /* FavoritesViewController.xib */; };
+		CFFABACC24014682004E4E5C /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABACB24014682004E4E5C /* EpisodeTableViewCell.swift */; };
+		CFFABACE240146A6004E4E5C /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABACD240146A6004E4E5C /* EpisodeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		CFB37E6724006B6800407010 /* HouseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
 		CFB37E6A24006BDF00407010 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CFB37E6C24006BF600407010 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		CFFABACB24014682004E4E5C /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		CFFABACD240146A6004E4E5C /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				CFB37E532400638100407010 /* EpisodeViewController.swift */,
 				CFB37E552400639D00407010 /* EpisodeViewController.xib */,
+				CFFABACB24014682004E4E5C /* EpisodeTableViewCell.swift */,
+				CFFABACD240146A6004E4E5C /* EpisodeTableViewCell.xib */,
 				CFB37E4E24005BBB00407010 /* RateViewController.swift */,
 				CFB37E5024005BDA00407010 /* RateViewController.xib */,
 			);
@@ -210,6 +216,7 @@
 				CFB37E6324006A1800407010 /* SettingsViewController.xib in Resources */,
 				CFB37E472400555200407010 /* LaunchScreen.storyboard in Resources */,
 				CFB37E5F240069B600407010 /* CastViewController.xib in Resources */,
+				CFFABACE240146A6004E4E5C /* EpisodeTableViewCell.xib in Resources */,
 				CFB37E6824006B6800407010 /* HouseViewController.xib in Resources */,
 				CFB37E562400639D00407010 /* EpisodeViewController.xib in Resources */,
 				CFB37E6D24006BF600407010 /* FavoritesViewController.xib in Resources */,
@@ -227,6 +234,7 @@
 				CFB37E3B2400555000407010 /* AppDelegate.swift in Sources */,
 				CFB37E6B24006BDF00407010 /* FavoritesViewController.swift in Sources */,
 				CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */,
+				CFFABACC24014682004E4E5C /* EpisodeTableViewCell.swift in Sources */,
 				CFB37E61240069FF00407010 /* SettingsViewController.swift in Sources */,
 				CFB37E542400638100407010 /* EpisodeViewController.swift in Sources */,
 				CFB37E592400652600407010 /* Episode.swift in Sources */,

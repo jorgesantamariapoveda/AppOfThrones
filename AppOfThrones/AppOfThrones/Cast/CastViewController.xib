@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CastViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="0JM-w0-PXQ" id="JHy-cN-0OJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="GhK-fi-Tt4"/>
             </connections>
         </placeholder>
@@ -16,9 +17,21 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0JM-w0-PXQ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0JM-w0-PXQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5yS-ih-zc0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0JM-w0-PXQ" secondAttribute="trailing" id="Gqp-z6-grD"/>
+                <constraint firstItem="0JM-w0-PXQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="KlU-BB-cZP"/>
+                <constraint firstItem="0JM-w0-PXQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="U8b-1s-kzU"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="133" y="154"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
 </document>

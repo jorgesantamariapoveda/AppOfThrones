@@ -8,9 +8,9 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController {
+class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var rateButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
 
     var episodes: [Episode] = [
         Episode.init(id: 1, name: "Name1", date: "Date1", image: "imagen1", episode: 1, season: 1, overview: "overview1"),
@@ -20,7 +20,7 @@ class EpisodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupUI()
+        self.setupUI()
     }
 
     // MARK: - Setups
@@ -28,16 +28,53 @@ class EpisodeViewController: UIViewController {
     func setupUI() {
         self.title = "Episode"
         self.view.backgroundColor = UIColor.red
-        self.rateButton.layer.cornerRadius = 4.0
+
+        let nib = UINib(nibName: "EpisodeTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "EpisodeTableViewCell")
+
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
 
     // MARK: - IBAction
     
-    @IBAction func fireRate(_ sender: UIButton) {
-        let rateViewController = RateViewController()
-        //🚩 Curioso...
-        //rateViewController.modalTransitionStyle = .crossDissolve
-        rateViewController.modalPresentationStyle = .fullScreen
-        self.present(rateViewController, animated: true, completion: nil)
+    //🚩
+//    @IBAction func fireRate(_ sender: UIButton) {
+//        let rateViewController = RateViewController()
+//        //rateViewController.modalTransitionStyle = .crossDissolve
+//        rateViewController.modalPresentationStyle = .fullScreen
+//        self.present(rateViewController, animated: true, completion: nil)
+//    }
+
+
+    // MARK: - UITableViewDataSource
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return episodes.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "EpisodeTableViewCell", for: indexPath) as? EpisodeTableViewCell {
+            let episode = episodes[indexPath.row]
+            cell.setEpisode(episode)
+            return cell
+        }
+        fatalError("OHHHHHHHH")
+    }
+
+    // MARK: - UITableViewDelegate
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Celda pulsada en sección \(indexPath.section) y fila \(indexPath.row)")
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }
