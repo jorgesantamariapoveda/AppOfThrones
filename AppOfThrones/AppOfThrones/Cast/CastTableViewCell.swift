@@ -32,10 +32,11 @@ class CastTableViewCell: UITableViewCell {
 
     // MARK: - Public functions
 
-    func setCast(_ cast: Cast) {
-        self.thumb.image = UIImage(named: cast.avatar ?? "")
-        self.name.text = cast.fullname
-        self.role.text = cast.role
-        self.episodes.text = cast.episode
+    func setCast(_ actor: Cast) {
+        self.thumb.image = UIImage(named: actor.avatar ?? "")
+        self.name.text = actor.fullname
+        self.role.text = actor.role
+        // 🚩 Como episode es opcional se ofrece un valor alternativo
+        self.episodes.text = "\(actor.episode ?? 0) episodes"
     }
 }

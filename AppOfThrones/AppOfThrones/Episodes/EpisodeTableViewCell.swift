@@ -32,6 +32,7 @@ class EpisodeTableViewCell: UITableViewCell {
     // MARK: - Public functions
 
     func setEpisode(_ episode: Episode) {
+        // 🚩 Como no admite opcional el parámetro named se hace una especie de else
         self.thumb.image = UIImage(named: episode.image ?? "")
         self.title.text = episode.name
         self.date.text = episode.date

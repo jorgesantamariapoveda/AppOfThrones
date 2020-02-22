@@ -12,10 +12,10 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
 
-    var casting: [Cast] = [
-                        Cast(id: 1, avatar: nil, fullname: "fullname1", role: "rol1", episode: "1", birth: "1980", placeBirth: "Alicante"),
-                        Cast(id: 2, avatar: nil, fullname: "fullname2", role: "rol2", episode: "2", birth: "1990", placeBirth: "Valencia"),
-                        Cast(id: 3, avatar: nil, fullname: "fullname3", role: "rol3", episode: "3", birth: "2000", placeBirth: "Castellón"),
+    var cast: [Cast] = [
+                        Cast(id: 1, avatar: "avatar1", fullname: "fullname1", role: "rol1", episode: nil, birth: "1980", placeBirth: "Alicante"),
+                        Cast(id: 2, avatar: "avatar2", fullname: "fullname2", role: "rol2", episode: 2, birth: "1990", placeBirth: "Valencia"),
+                        Cast(id: 3, avatar: nil, fullname: "fullname3", role: "rol3", episode: 3, birth: "2000", placeBirth: "Castellón"),
     ]
     
     override func viewDidLoad() {
@@ -43,13 +43,13 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return casting.count
+        return cast.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CastTableViewCell", for: indexPath) as? CastTableViewCell {
-            let cast = casting[indexPath.row]
-            cell.setCast(cast)
+            let actor = cast[indexPath.row]
+            cell.setCast(actor)
             return cell
         }
         fatalError("OHHHHHHHH")

@@ -14,8 +14,8 @@ struct Cast {
     var avatar: String?
     var fullname: String?
     var role: String?
-    var episode: String?
+    var episode: Int?
     var birth: String?
     var placeBirth: String?
-    
+
 }
