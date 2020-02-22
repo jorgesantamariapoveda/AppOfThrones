@@ -44,6 +44,17 @@ class EpisodeTableViewCell: UITableViewCell {
         self.thumb.image = UIImage(named: episode.image ?? "")
         self.title.text = episode.name
         self.date.text = episode.date
+
+        if let rating = DataController.shared.ratingForEpisode(episode) {
+            switch rating.rate {
+            case .unrated:
+                self.modeRate()
+            case .rated(let value):
+                self.setRating(value)
+            }
+        } else {
+            self.modeRate()
+        }
     }
 
     // MARK: - IBAction

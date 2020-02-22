@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateViewControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -62,6 +62,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.setEpisode(episode)
             cell.rateClousure = {
                 let rateVC = RateViewController.init(withEpisode: episode)
+                rateVC.delegate = self
                 let navigationVC = UINavigationController.init(rootViewController: rateVC)
                 self.present(navigationVC, animated: true, completion: nil)
             }
@@ -83,6 +84,11 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return false // Se desactiva el tap
+    }
+
+    // MARK: - EpisodeRateViewControllerDelegate
+    func didRateChangued() {
+        self.tableView.reloadData()
     }
 
 }

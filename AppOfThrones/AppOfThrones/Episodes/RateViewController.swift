@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol RateViewControllerDelegate {
+    func didRateChangued()
+}
+
 class RateViewController: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
@@ -21,6 +25,7 @@ class RateViewController: UIViewController {
     @IBOutlet weak var acceptButton: UIButton!
 
     private var episode: Episode?
+    var delegate: RateViewControllerDelegate?
 
     convenience init(withEpisode episode: Episode) {
         self.init()
@@ -53,6 +58,7 @@ class RateViewController: UIViewController {
         if let episode = self.episode {
             DataController.shared.rateEpisode(episode, value: rate)
         }
+        self.delegate?.didRateChangued()
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
 
