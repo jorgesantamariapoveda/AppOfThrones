@@ -1,5 +1,5 @@
 //
-//  CastTableViewCell.swift
+//  HouseTableViewCell.swift
 //  AppOfThrones
 //
 //  Created by Jorge on 22/02/2020.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class CastTableViewCell: UITableViewCell {
+class HouseTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumb: UIImageView!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var role: UILabel!
-    @IBOutlet weak var episodes: UILabel!
-    @IBOutlet weak var heartButton: UIButton!
-
+    @IBOutlet weak var lema: UILabel!
+    @IBOutlet weak var localidad: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -32,11 +31,10 @@ class CastTableViewCell: UITableViewCell {
 
     // MARK: - Public functions
 
-    func setCast(_ actor: Cast) {
-        self.thumb.image = UIImage(named: actor.avatar ?? "")
-        self.name.text = actor.fullname
-        self.role.text = actor.role
-        // 🚩 Como episode es opcional se ofrece un valor alternativo
-        self.episodes.text = "\(actor.episode ?? 0) episodes"
+    func setHouse(_ house: House) {
+        self.thumb.image = UIImage(named: house.imageName ?? "")
+        self.name.text = house.name
+        self.lema.text = house.words
+        self.localidad.text = house.seat
     }
 }

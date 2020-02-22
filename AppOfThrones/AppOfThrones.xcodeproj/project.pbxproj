@@ -20,7 +20,7 @@
 		CFB37E5F240069B600407010 /* CastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E5E240069B600407010 /* CastViewController.xib */; };
 		CFB37E61240069FF00407010 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E60240069FF00407010 /* SettingsViewController.swift */; };
 		CFB37E6324006A1800407010 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E6224006A1800407010 /* SettingsViewController.xib */; };
-		CFB37E6624006B4900407010 /* ter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E6524006B4900407010 /* ter.swift */; };
+		CFB37E6624006B4900407010 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E6524006B4900407010 /* HouseViewController.swift */; };
 		CFB37E6824006B6800407010 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E6724006B6800407010 /* HouseViewController.xib */; };
 		CFB37E6B24006BDF00407010 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E6A24006BDF00407010 /* FavoritesViewController.swift */; };
 		CFB37E6D24006BF600407010 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E6C24006BF600407010 /* FavoritesViewController.xib */; };
@@ -30,6 +30,9 @@
 		CFFABAD224015A0A004E4E5C /* CastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABAD124015A0A004E4E5C /* CastTableViewCell.xib */; };
 		CFFABAD424015D6E004E4E5C /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABAD324015D6E004E4E5C /* Cast.swift */; };
 		CFFABAD62401748B004E4E5C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABAD52401748B004E4E5C /* DataController.swift */; };
+		CFFABAD8240178AD004E4E5C /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABAD7240178AD004E4E5C /* House.swift */; };
+		CFFABADA24017B92004E4E5C /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABAD924017B92004E4E5C /* HouseTableViewCell.swift */; };
+		CFFABADC24017BE8004E4E5C /* HouseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABADB24017BE8004E4E5C /* HouseTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +51,7 @@
 		CFB37E5E240069B600407010 /* CastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastViewController.xib; sourceTree = "<group>"; };
 		CFB37E60240069FF00407010 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CFB37E6224006A1800407010 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		CFB37E6524006B4900407010 /* ter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ter.swift; sourceTree = "<group>"; };
+		CFB37E6524006B4900407010 /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		CFB37E6724006B6800407010 /* HouseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
 		CFB37E6A24006BDF00407010 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		CFB37E6C24006BF600407010 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
@@ -58,6 +61,9 @@
 		CFFABAD124015A0A004E4E5C /* CastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastTableViewCell.xib; sourceTree = "<group>"; };
 		CFFABAD324015D6E004E4E5C /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		CFFABAD52401748B004E4E5C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		CFFABAD7240178AD004E4E5C /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		CFFABAD924017B92004E4E5C /* HouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
+		CFFABADB24017BE8004E4E5C /* HouseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 			children = (
 				CFB37E582400652600407010 /* Episode.swift */,
 				CFFABAD324015D6E004E4E5C /* Cast.swift */,
+				CFFABAD7240178AD004E4E5C /* House.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,8 +158,10 @@
 		CFB37E6424006B2700407010 /* Houses */ = {
 			isa = PBXGroup;
 			children = (
-				CFB37E6524006B4900407010 /* ter.swift */,
+				CFB37E6524006B4900407010 /* HouseViewController.swift */,
 				CFB37E6724006B6800407010 /* HouseViewController.xib */,
+				CFFABAD924017B92004E4E5C /* HouseTableViewCell.swift */,
+				CFFABADB24017BE8004E4E5C /* HouseTableViewCell.xib */,
 			);
 			path = Houses;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 				CFFABAD224015A0A004E4E5C /* CastTableViewCell.xib in Resources */,
 				CFB37E472400555200407010 /* LaunchScreen.storyboard in Resources */,
 				CFB37E5F240069B600407010 /* CastViewController.xib in Resources */,
+				CFFABADC24017BE8004E4E5C /* HouseTableViewCell.xib in Resources */,
 				CFFABACE240146A6004E4E5C /* EpisodeTableViewCell.xib in Resources */,
 				CFB37E6824006B6800407010 /* HouseViewController.xib in Resources */,
 				CFB37E562400639D00407010 /* EpisodeViewController.xib in Resources */,
@@ -244,9 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFABAD8240178AD004E4E5C /* House.swift in Sources */,
 				CFB37E3B2400555000407010 /* AppDelegate.swift in Sources */,
 				CFB37E6B24006BDF00407010 /* FavoritesViewController.swift in Sources */,
 				CFB37E4F24005BBB00407010 /* RateViewController.swift in Sources */,
+				CFFABADA24017B92004E4E5C /* HouseTableViewCell.swift in Sources */,
 				CFFABACC24014682004E4E5C /* EpisodeTableViewCell.swift in Sources */,
 				CFFABAD424015D6E004E4E5C /* Cast.swift in Sources */,
 				CFB37E61240069FF00407010 /* SettingsViewController.swift in Sources */,
@@ -256,7 +268,7 @@
 				CFB37E3D2400555000407010 /* SceneDelegate.swift in Sources */,
 				CFB37E5D2400699D00407010 /* CastViewController.swift in Sources */,
 				CFFABAD62401748B004E4E5C /* DataController.swift in Sources */,
-				CFB37E6624006B4900407010 /* ter.swift in Sources */,
+				CFB37E6624006B4900407010 /* HouseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

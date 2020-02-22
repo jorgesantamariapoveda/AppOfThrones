@@ -1,5 +1,5 @@
 //
-//  CastViewController.swift
+//  HouseViewController.swift
 //  AppOfThrones
 //
 //  Created by Jorge on 21/02/2020.
@@ -8,14 +8,15 @@
 
 import UIKit
 
-class CastViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var cast: [Cast] = [
-                        Cast(id: 1, avatar: "avatar1", fullname: "fullname1", role: "rol1", episode: nil, birth: "1980", placeBirth: "Alicante"),
-                        Cast(id: 2, avatar: "avatar2", fullname: "fullname2", role: "rol2", episode: 2, birth: "1990", placeBirth: "Valencia"),
-                        Cast(id: 3, avatar: nil, fullname: "fullname3", role: "rol3", episode: 3, birth: "2000", placeBirth: "Castellón"),
+    var houses: [House] = [
+                        House(imageName: "Casa1", name: "Casa1", words: "Lema1", seat: "Local1"),
+                        House(imageName: "Casa2", name: "Casa2", words: "Lema2", seat: "Local2"),
+                        House(imageName: "Casa3", name: "Casa3", words: "Lema3", seat: "Local3"),
+                        House(imageName: "Casa4", name: "Casa4", words: "Lema4", seat: "Local4")
     ]
     
     override func viewDidLoad() {
@@ -27,10 +28,10 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - Setups
 
     func setupUI() {
-        self.title = "Cast"
+        self.title = "Houses"
 
-        let nib = UINib(nibName: "CastTableViewCell", bundle: nil)
-        self.tableView.register(nib, forCellReuseIdentifier: "CastTableViewCell")
+        let nib = UINib(nibName: "HouseTableViewCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "HouseTableViewCell")
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -43,13 +44,13 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cast.count
+        return houses.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CastTableViewCell", for: indexPath) as? CastTableViewCell {
-            let actor = cast[indexPath.row]
-            cell.setCast(actor)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseTableViewCell", for: indexPath) as? HouseTableViewCell {
+            let house = houses[indexPath.row]
+            cell.setHouse(house)
             return cell
         }
         fatalError("OHHHHHHHH")
@@ -58,12 +59,11 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 115
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Celda pulsada en sección \(indexPath.section) y fila \(indexPath.row)")
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
 }

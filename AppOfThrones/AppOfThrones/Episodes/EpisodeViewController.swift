@@ -19,7 +19,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.setupUI()
     }
 

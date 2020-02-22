@@ -17,7 +17,7 @@ class EpisodeTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         self.setupUI()
     }
 

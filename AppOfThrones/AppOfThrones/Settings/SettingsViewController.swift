@@ -13,9 +13,14 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupUI()
+    }
+
+    // MARK: - Setup
+
+    func setupUI() {
         self.title = "Settings"
         self.view.backgroundColor = UIColor.purple
     }
-
 
 }

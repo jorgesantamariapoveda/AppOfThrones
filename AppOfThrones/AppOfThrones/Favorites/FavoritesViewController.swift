@@ -13,9 +13,14 @@ class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupUI()
+    }
+
+    // MARK: - Setup
+
+    func setupUI() {
         self.title = "Favorites"
         self.view.backgroundColor = UIColor.yellow
     }
-
 
 }
