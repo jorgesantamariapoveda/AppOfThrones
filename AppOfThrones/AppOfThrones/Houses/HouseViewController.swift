@@ -64,6 +64,9 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Celda pulsada en sección \(indexPath.section) y fila \(indexPath.row)")
+        let name = houses[indexPath.row].name
+        let houseDetailViewController = HouseDetailViewController.init(title: name)
+        self.navigationController?.pushViewController(houseDetailViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
