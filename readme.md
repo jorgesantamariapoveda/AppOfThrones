@@ -1,27 +1,26 @@
 # Práctica de Fundamentos iOS
 
 **Elementos más destacados**
->
-XIB para la creación del interfaz (nada de storyboards)
->
-Opcionales
->
-Autolayout
->
-UITabBarController y UINavigationController
->
-Ciclo de vida de un UIViewController
->
-UITableView y UITableViewCell
->
-Protocolos, Enum y patrón Singleton
->
-Patrones de comunicación: Clousure, Delegate y NotificationCenter
->
-Genéricos
->
-Gestión de errores try catch throws
->
-JSON
->
-ARC weak unowned
+>XIB para la creación del interfaz (nada de storyboards)
+
+>Opcionales
+
+>Autolayout
+
+>UITabBarController y UINavigationController
+
+>Ciclo de vida de un UIViewController
+
+>UITableView y UITableViewCell
+
+>Protocolos, Enum y patrón Singleton
+
+>Patrones de comunicación: Clousure, Delegate y NotificationCenter
+
+>Genéricos
+
+>Gestión de errores try catch throws
+
+>JSON
+
+>ARC weak unowned
