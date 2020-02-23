@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EpisodeTableViewCellDelegate {
+    func didFavoriteChanged()
+}
+
 class EpisodeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var thumb: UIImageView!
@@ -19,8 +23,12 @@ class EpisodeTableViewCell: UITableViewCell {
     @IBOutlet weak var star03: UIImageView!
     @IBOutlet weak var star04: UIImageView!
     @IBOutlet weak var star05: UIImageView!
+    @IBOutlet weak var heartButton: UIButton!
 
     var rateClousure: (() -> Void)?
+
+    private var episode: Episode?
+    var delegate: EpisodeTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,6 +48,8 @@ class EpisodeTableViewCell: UITableViewCell {
     // MARK: - Public functions
 
     func setEpisode(_ episode: Episode) {
+        self.episode = episode
+
         // 🚩 Como no admite opcional el parámetro named se hace una especie de else
         self.thumb.image = UIImage(named: episode.image ?? "")
         self.title.text = episode.name
@@ -55,6 +65,10 @@ class EpisodeTableViewCell: UITableViewCell {
         } else {
             self.modeRate()
         }
+
+        let heartImageName = DataController.shared.isFavoriteEpisode(episode) ? "heart.fill" : "heart"
+        let heartImage = UIImage.init(systemName: heartImageName)
+        self.heartButton.setImage(heartImage, for: .normal)
     }
 
     // MARK: - IBAction
@@ -67,6 +81,17 @@ class EpisodeTableViewCell: UITableViewCell {
         }
         // 2...
         //self.rateClousure?()
+    }
+
+    @IBAction func fireHeart(_ sender: UIButton) {
+        if let episode = self.episode {
+            if DataController.shared.isFavoriteEpisode(episode) == true {
+                DataController.shared.removeFavoriteEpisode(episode)
+            } else {
+                DataController.shared.addFavoriteEpisode(episode)
+            }
+            self.delegate?.didFavoriteChanged()
+        }
     }
 
     // MARK: - Rating

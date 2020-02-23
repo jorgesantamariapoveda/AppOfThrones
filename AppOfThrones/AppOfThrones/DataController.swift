@@ -38,6 +38,22 @@ class DataController {
         }
     }
 
+    func isFavoriteEpisode(_ episode: Episode) -> Bool {
+        return favorite.contains(episode.id)
+    }
+
+    func addFavoriteEpisode(_ episode: Episode) {
+        if self.isFavoriteEpisode(episode) == false {
+            favorite.append(episode.id)
+        }
+    }
+
+    func removeFavoriteEpisode(_ episode: Episode) {
+        if let index = favorite.firstIndex(of: episode.id) {
+            favorite.remove(at: index)
+        }
+    }
+
     // MARK: - Rating
 
     func rateEpisode(_ episode: Episode, value: Double) {

@@ -23,19 +23,19 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok3-X5-Au0">
-                        <rect key="frame" x="188" y="12" width="206" height="25"/>
+                        <rect key="frame" x="188" y="12" width="180" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="7HH-R1-uug"/>
-                            <constraint firstAttribute="width" constant="206" id="ovt-sh-1GD"/>
+                            <constraint firstAttribute="width" constant="180" id="ovt-sh-1GD"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nq-k3-fnK">
-                        <rect key="frame" x="188" y="45" width="206" height="25"/>
+                        <rect key="frame" x="188" y="45" width="180" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="206" id="39f-sr-Rpc"/>
+                            <constraint firstAttribute="width" constant="180" id="39f-sr-Rpc"/>
                             <constraint firstAttribute="height" constant="25" id="I1r-h5-I0z"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -97,6 +97,17 @@
                             <constraint firstAttribute="width" constant="24" id="ZkF-NZ-QdQ"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bx-Mv-6Qw">
+                        <rect key="frame" x="381" y="20" width="33" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="pWW-nx-BO6"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="fireHeart:" destination="HAd-Ib-vgx" eventType="touchUpInside" id="42m-Bu-sa4"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="9PM-wT-ZS2" firstAttribute="leading" secondItem="xKd-On-0UI" secondAttribute="trailing" constant="8" id="1qP-4b-fxg"/>
@@ -105,10 +116,13 @@
                     <constraint firstItem="g4N-6C-LRS" firstAttribute="leading" secondItem="xKd-On-0UI" secondAttribute="trailing" constant="15" id="7EG-7Y-ZOj"/>
                     <constraint firstItem="Ok3-X5-Au0" firstAttribute="top" secondItem="dZd-md-1ib" secondAttribute="top" constant="12" id="BaW-2a-lwS"/>
                     <constraint firstItem="Ok3-X5-Au0" firstAttribute="leading" secondItem="xKd-On-0UI" secondAttribute="trailing" constant="8" id="CWs-53-5l1"/>
+                    <constraint firstItem="7bx-Mv-6Qw" firstAttribute="top" secondItem="dZd-md-1ib" secondAttribute="top" constant="20" symbolic="YES" id="GK3-4b-VVl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="g4N-6C-LRS" secondAttribute="bottom" constant="8" id="GKD-Q3-omz"/>
                     <constraint firstItem="hUT-Ye-iyf" firstAttribute="leading" secondItem="g4N-6C-LRS" secondAttribute="trailing" constant="5" id="Hv6-8U-Rzh"/>
+                    <constraint firstAttribute="trailing" secondItem="7bx-Mv-6Qw" secondAttribute="trailing" id="K4t-JS-MDw"/>
                     <constraint firstAttribute="bottom" secondItem="9PM-wT-ZS2" secondAttribute="bottom" constant="15" id="KjN-oH-ovf"/>
                     <constraint firstItem="4Nq-k3-fnK" firstAttribute="leading" secondItem="xKd-On-0UI" secondAttribute="trailing" constant="8" id="RQC-sj-Jp6"/>
+                    <constraint firstAttribute="bottom" secondItem="7bx-Mv-6Qw" secondAttribute="bottom" constant="20" symbolic="YES" id="SlI-a9-4ub"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hUT-Ye-iyf" secondAttribute="bottom" constant="8" id="WoS-HW-e4R"/>
                     <constraint firstAttribute="bottomMargin" secondItem="3Jh-6v-n0N" secondAttribute="bottom" constant="8" id="ZFa-Kj-9u4"/>
                     <constraint firstItem="4Nq-k3-fnK" firstAttribute="top" secondItem="Ok3-X5-Au0" secondAttribute="bottom" constant="8" id="fQg-VM-WhR"/>
@@ -121,6 +135,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="date" destination="4Nq-k3-fnK" id="nhu-Zn-NKo"/>
+                <outlet property="heartButton" destination="7bx-Mv-6Qw" id="iz2-ap-t19"/>
                 <outlet property="rateButton" destination="9PM-wT-ZS2" id="3oB-Us-J2P"/>
                 <outlet property="star01" destination="g4N-6C-LRS" id="9o5-l9-MWF"/>
                 <outlet property="star02" destination="hUT-Ye-iyf" id="RpA-bg-EO8"/>
@@ -134,6 +149,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>

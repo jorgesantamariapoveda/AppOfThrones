@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateViewControllerDelegate {
+class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RateViewControllerDelegate, EpisodeTableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -66,6 +66,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let navigationVC = UINavigationController.init(rootViewController: rateVC)
                 self.present(navigationVC, animated: true, completion: nil)
             }
+            cell.delegate = self
             return cell
         }
         fatalError("OHHHHHHHH")
@@ -91,4 +92,9 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.reloadData()
     }
 
+    // MARK: - EpisodeTableViewCellDelegate
+
+    func didFavoriteChanged() {
+        self.tableView.reloadData()
+    }
 }
