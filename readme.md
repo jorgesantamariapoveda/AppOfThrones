@@ -4,6 +4,8 @@
 >
 XIB para la creación del interfaz (nada de storyboards)
 >
+Opcionales
+>
 Autolayout
 >
 UITabBarController y UINavigationController
