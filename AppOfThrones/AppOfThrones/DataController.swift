@@ -108,4 +108,9 @@ class DataController {
         }
         return filtrados.first
     }
+
+    func cleanRate() {
+        rating.removeAll() // o también favorite = []
+    }
+
 }

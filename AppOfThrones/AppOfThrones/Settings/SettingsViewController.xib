@@ -9,7 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
-                <outlet property="resetFavoritesButton" destination="5SX-2s-LG3" id="HWI-Df-chp"/>
+                <outlet property="cleanFavoritesButton" destination="5SX-2s-LG3" id="HWI-Df-chp"/>
+                <outlet property="cleanRateButtton" destination="1mj-xM-d0i" id="Zcb-sT-Be7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="iV8-y5-tTi"/>
             </connections>
         </placeholder>
@@ -19,25 +20,44 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-2s-LG3">
-                    <rect key="frame" x="100" y="419.5" width="214" height="57"/>
+                    <rect key="frame" x="100" y="469.5" width="214" height="57"/>
                     <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="JzJ-hc-xMA"/>
                         <constraint firstAttribute="width" constant="214" id="eZa-jX-vtS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Reset favorites">
+                    <state key="normal" title="Clean favorites">
                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="fireResetFavorites:" destination="-1" eventType="touchUpInside" id="jNR-xT-yig"/>
+                        <action selector="fireCleanFavorites:" destination="-1" eventType="touchUpInside" id="jNR-xT-yig"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mj-xM-d0i">
+                    <rect key="frame" x="100" y="369.5" width="214" height="57"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="2Lq-oR-2Ou"/>
+                        <constraint firstAttribute="width" constant="214" id="DGx-HC-bdB"/>
+                        <constraint firstAttribute="height" constant="57" id="Hya-Ay-frq"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="214" id="VYM-aI-VES"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Clean reviews">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="fireCleanRate:" destination="-1" eventType="touchUpInside" id="ms8-VS-wjc"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="5SX-2s-LG3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3ew-AW-VmH"/>
+                <constraint firstItem="5SX-2s-LG3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="50" id="OGZ-uv-2Mn"/>
+                <constraint firstItem="1mj-xM-d0i" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kah-Ah-gF6"/>
                 <constraint firstItem="5SX-2s-LG3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ugg-Ac-ccc"/>
+                <constraint firstItem="1mj-xM-d0i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-50" id="yRD-i5-yod"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>

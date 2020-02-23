@@ -10,7 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var resetFavoritesButton: UIButton!
+    @IBOutlet weak var cleanFavoritesButton: UIButton!
+    @IBOutlet weak var cleanRateButtton: UIButton!
 
     // MARK: - Lifecycle
 
@@ -24,14 +25,21 @@ class SettingsViewController: UIViewController {
 
     func setupUI() {
         self.title = "Settings"
-        self.resetFavoritesButton.layer.cornerRadius = 4.0
+        self.cleanFavoritesButton.layer.cornerRadius = 4.0
+        self.cleanRateButtton.layer.cornerRadius = 4.0
     }
 
     // MARK: - IBActions
 
-    @IBAction func fireResetFavorites(_ sender: UIButton) {
+    @IBAction func fireCleanFavorites(_ sender: UIButton) {
         DataController.shared.cleanFavorite()
         // El object debe coincidir con lo definido en el observador
         NotificationCenter.default.post(name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
+    }
+    
+    @IBAction func fireCleanRate(_ sender: UIButton) {
+        DataController.shared.cleanRate()
+        // El object debe coincidir con lo definido en el observador
+        NotificationCenter.default.post(name: Constants.kNoteNameDidRateUpdated, object: nil)
     }
 }

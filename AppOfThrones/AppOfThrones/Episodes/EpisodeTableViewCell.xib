@@ -43,11 +43,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PM-wT-ZS2">
-                        <rect key="frame" x="188" y="82" width="89" height="33"/>
+                        <rect key="frame" x="188" y="82" width="90" height="33"/>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="ARJ-HV-bwS"/>
-                            <constraint firstAttribute="width" constant="89" id="fTM-3X-91B"/>
+                            <constraint firstAttribute="width" constant="90" id="fTM-3X-91B"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" title="RATE">
@@ -82,7 +82,7 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wlI-uD-F1m">
-                        <rect key="frame" x="282" y="87" width="24" height="24"/>
+                        <rect key="frame" x="283" y="87" width="24" height="24"/>
                         <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="L1k-bx-9NQ"/>
@@ -90,7 +90,7 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iFq-VI-t3P">
-                        <rect key="frame" x="311" y="87" width="24" height="24"/>
+                        <rect key="frame" x="312" y="87" width="24" height="24"/>
                         <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="VZP-X2-AA9"/>

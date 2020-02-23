@@ -17,6 +17,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     deinit {
         // Si no se hace esto puede caerse la app
         NotificationCenter.default.removeObserver(self, name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Constants.kNoteNameDidRateUpdated, object: nil)
     }
 
     // MARK: - Lifecycle
@@ -45,6 +46,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         // En vez de crear uno específico se puede usar el que hay por defecto
         //let noteName = Notification.Name.init("DidFavoritesUpdated")
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didRateChangued), name: Constants.kNoteNameDidRateUpdated, object: nil)
     }
 
     func setupData(_ seasonNumber: Int) {
@@ -111,7 +113,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     // MARK: - EpisodeRateViewControllerDelegate
 
-    func didRateChangued() {
+    @objc func didRateChangued() {
         self.tableView.reloadData()
     }
 
