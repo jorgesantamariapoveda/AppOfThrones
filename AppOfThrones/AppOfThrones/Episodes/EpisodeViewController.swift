@@ -17,10 +17,16 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
                         Episode.init(id: 234, name: "Name2", date: "Date2", image: "imagen2", episode: 2, season: 2, overview: "overview2")
     ]
 
+    deinit {
+        // Si no se hace esto puede caerse la app
+        NotificationCenter.default.removeObserver(self, name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupUI()
+        self.setupNotifications()
     }
 
     // MARK: - Setups
@@ -33,6 +39,12 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
+
+    func setupNotifications() {
+        // En vez de crear uno específico se puede usar el que hay por defecto
+        //let noteName = Notification.Name.init("DidFavoritesUpdated")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
     }
 
     // MARK: - IBAction
@@ -88,13 +100,14 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     // MARK: - EpisodeRateViewControllerDelegate
+
     func didRateChangued() {
         self.tableView.reloadData()
     }
 
     // MARK: - FavoriteDelegate
 
-    func didFavoriteChanged() {
+    @objc func didFavoriteChanged() {
         self.tableView.reloadData()
     }
 }

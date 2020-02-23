@@ -58,6 +58,10 @@ class DataController {
         }
     }
 
+    func cleanFavorite() {
+        favorite.removeAll() // o también favorite = []
+    }
+
     // MARK: - Rating
 
     func rateEpisode(_ episode: Episode, value: Double) {

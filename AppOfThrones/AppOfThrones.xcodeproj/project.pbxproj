@@ -36,6 +36,7 @@
 		CFFABADE240185F8004E4E5C /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABADD240185F8004E4E5C /* HouseDetailViewController.swift */; };
 		CFFABAE0240186E9004E4E5C /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFABADF240186E9004E4E5C /* HouseDetailViewController.xib */; };
 		CFFABAE224019A3A004E4E5C /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFABAE124019A3A004E4E5C /* Rating.swift */; };
+		CFFF1A422402C201000318DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF1A412402C201000318DB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		CFFABADD240185F8004E4E5C /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		CFFABADF240186E9004E4E5C /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
 		CFFABAE124019A3A004E4E5C /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		CFFF1A412402C201000318DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				CFFABAD324015D6E004E4E5C /* Cast.swift */,
 				CFFABAD7240178AD004E4E5C /* House.swift */,
 				CFFABAE124019A3A004E4E5C /* Rating.swift */,
+				CFFF1A412402C201000318DB /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				CFB37E5D2400699D00407010 /* CastViewController.swift in Sources */,
 				CFFABAD62401748B004E4E5C /* DataController.swift in Sources */,
 				CFB37E6624006B4900407010 /* HouseViewController.swift in Sources */,
+				CFFF1A422402C201000318DB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

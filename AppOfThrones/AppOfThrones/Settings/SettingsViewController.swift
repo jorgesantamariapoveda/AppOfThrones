@@ -28,5 +28,8 @@ class SettingsViewController: UIViewController {
     // MARK: - IBActions
 
     @IBAction func fireResetFavorites(_ sender: UIButton) {
+        DataController.shared.cleanFavorite()
+        // El object debe coincidir con lo definido en el observador
+        NotificationCenter.default.post(name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
     }
 }

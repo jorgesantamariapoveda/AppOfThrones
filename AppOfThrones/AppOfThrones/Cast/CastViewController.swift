@@ -17,11 +17,16 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         Cast(id: 222, avatar: "avatar2", fullname: "fullname2", role: "rol2", episode: 2, birth: "1990", placeBirth: "Valencia"),
                         Cast(id: 333, avatar: nil, fullname: "fullname3", role: "rol3", episode: 3, birth: "2000", placeBirth: "Castellón"),
     ]
+
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupUI()
+        self.setupNotifications()
     }
 
     // MARK: - Setups
@@ -34,6 +39,11 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
+
+    func setupNotifications() {
+        // En vez de crear uno específico se puede usar el que hay por defecto
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
     }
 
     // MARK: - UITableViewDataSource
@@ -69,7 +79,7 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     // MARK: - FavoriteDelegate
 
-    func didFavoriteChanged() {
+    @objc func didFavoriteChanged() {
         self.tableView.reloadData()
     }
 
