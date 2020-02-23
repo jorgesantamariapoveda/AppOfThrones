@@ -45,21 +45,6 @@
                         <constraint firstAttribute="width" constant="300" id="kIQ-Av-PGE"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm6-wU-bui">
-                    <rect key="frame" x="107" y="805" width="200" height="57"/>
-                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="57" id="61A-KQ-vgh"/>
-                        <constraint firstAttribute="width" constant="200" id="eVR-ad-70l"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Accept">
-                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="fireAccept:" destination="-1" eventType="touchUpInside" id="kat-Re-bNo"/>
-                    </connections>
-                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.lefthalf.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2FJ-wc-6rB">
                     <rect key="frame" x="195" y="439" width="24" height="24"/>
                     <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,6 +105,21 @@
                         <constraint firstAttribute="height" constant="24" id="WOP-xN-C9w"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm6-wU-bui">
+                    <rect key="frame" x="107" y="785" width="200" height="57"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="61A-KQ-vgh"/>
+                        <constraint firstAttribute="width" constant="200" id="eVR-ad-70l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Accept">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="fireAccept:" destination="-1" eventType="touchUpInside" id="kat-Re-bNo"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -132,7 +132,6 @@
                 <constraint firstItem="2FJ-wc-6rB" firstAttribute="top" secondItem="MTB-rX-QnZ" secondAttribute="bottom" constant="50" id="Hd4-SP-Mph"/>
                 <constraint firstItem="2FJ-wc-6rB" firstAttribute="leading" secondItem="vTx-hU-T5o" secondAttribute="trailing" constant="8" id="Hsw-5P-ZAC"/>
                 <constraint firstItem="jvh-5m-hd6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="I4T-yx-m6A"/>
-                <constraint firstItem="Bm6-wU-bui" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Jst-QM-gEj"/>
                 <constraint firstItem="2FJ-wc-6rB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MR8-Ua-x3I"/>
                 <constraint firstItem="Zrh-2m-S5e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SOX-rV-Z9z"/>
                 <constraint firstItem="Bm6-wU-bui" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Tzt-QA-tkK"/>
@@ -140,6 +139,7 @@
                 <constraint firstItem="2rp-ku-pdb" firstAttribute="top" secondItem="Zrh-2m-S5e" secondAttribute="bottom" constant="131" id="bt5-1i-G8a"/>
                 <constraint firstItem="2rp-ku-pdb" firstAttribute="leading" secondItem="2FJ-wc-6rB" secondAttribute="trailing" constant="8" id="dte-K8-q4U"/>
                 <constraint firstItem="UYk-mR-Gun" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l3e-GH-6zO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Bm6-wU-bui" secondAttribute="bottom" constant="20" id="qtL-vr-E47"/>
                 <constraint firstItem="vTx-hU-T5o" firstAttribute="leading" secondItem="fed-rg-wac" secondAttribute="trailing" constant="8" id="sx8-sw-sWR"/>
                 <constraint firstItem="MTB-rX-QnZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uMr-aL-mN5"/>
                 <constraint firstItem="jvh-5m-hd6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uXC-9E-Bug"/>

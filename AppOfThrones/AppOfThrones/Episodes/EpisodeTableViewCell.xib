@@ -98,7 +98,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bx-Mv-6Qw">
-                        <rect key="frame" x="381" y="20" width="33" height="90"/>
+                        <rect key="frame" x="371" y="20" width="33" height="90"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="33" id="pWW-nx-BO6"/>
                         </constraints>
@@ -119,7 +119,7 @@
                     <constraint firstItem="7bx-Mv-6Qw" firstAttribute="top" secondItem="dZd-md-1ib" secondAttribute="top" constant="20" symbolic="YES" id="GK3-4b-VVl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="g4N-6C-LRS" secondAttribute="bottom" constant="8" id="GKD-Q3-omz"/>
                     <constraint firstItem="hUT-Ye-iyf" firstAttribute="leading" secondItem="g4N-6C-LRS" secondAttribute="trailing" constant="5" id="Hv6-8U-Rzh"/>
-                    <constraint firstAttribute="trailing" secondItem="7bx-Mv-6Qw" secondAttribute="trailing" id="K4t-JS-MDw"/>
+                    <constraint firstAttribute="trailing" secondItem="7bx-Mv-6Qw" secondAttribute="trailing" constant="10" id="K4t-JS-MDw"/>
                     <constraint firstAttribute="bottom" secondItem="9PM-wT-ZS2" secondAttribute="bottom" constant="15" id="KjN-oH-ovf"/>
                     <constraint firstItem="4Nq-k3-fnK" firstAttribute="leading" secondItem="xKd-On-0UI" secondAttribute="trailing" constant="8" id="RQC-sj-Jp6"/>
                     <constraint firstAttribute="bottom" secondItem="7bx-Mv-6Qw" secondAttribute="bottom" constant="20" symbolic="YES" id="SlI-a9-4ub"/>

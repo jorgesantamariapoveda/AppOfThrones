@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol EpisodeTableViewCellDelegate {
-    func didFavoriteChanged()
-}
-
 class EpisodeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var thumb: UIImageView!
@@ -28,7 +24,7 @@ class EpisodeTableViewCell: UITableViewCell {
     var rateClousure: (() -> Void)?
 
     private var episode: Episode?
-    var delegate: EpisodeTableViewCellDelegate?
+    var delegate: FavoriteDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()

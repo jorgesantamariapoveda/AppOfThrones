@@ -8,14 +8,14 @@
 
 import UIKit
 
-class CastViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CastTableViewCellDelegate {
+class CastViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FavoriteDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
     var cast: [Cast] = [
-                        Cast(id: 1, avatar: "avatar1", fullname: "fullname1", role: "rol1", episode: nil, birth: "1980", placeBirth: "Alicante"),
-                        Cast(id: 2, avatar: "avatar2", fullname: "fullname2", role: "rol2", episode: 2, birth: "1990", placeBirth: "Valencia"),
-                        Cast(id: 3, avatar: nil, fullname: "fullname3", role: "rol3", episode: 3, birth: "2000", placeBirth: "Castellón"),
+                        Cast(id: 111, avatar: "avatar1", fullname: "fullname1", role: "rol1", episode: nil, birth: "1980", placeBirth: "Alicante"),
+                        Cast(id: 222, avatar: "avatar2", fullname: "fullname2", role: "rol2", episode: 2, birth: "1990", placeBirth: "Valencia"),
+                        Cast(id: 333, avatar: nil, fullname: "fullname3", role: "rol3", episode: 3, birth: "2000", placeBirth: "Castellón"),
     ]
     
     override func viewDidLoad() {
@@ -67,7 +67,7 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    // MARK: - CastTableViewCellDelegate
+    // MARK: - FavoriteDelegate
 
     func didFavoriteChanged() {
         self.tableView.reloadData()

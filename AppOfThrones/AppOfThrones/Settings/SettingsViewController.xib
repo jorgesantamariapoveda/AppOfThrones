@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="resetFavoritesButton" destination="5SX-2s-LG3" id="HWI-Df-chp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="iV8-y5-tTi"/>
             </connections>
         </placeholder>
@@ -16,9 +17,30 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-2s-LG3">
+                    <rect key="frame" x="100" y="785" width="214" height="57"/>
+                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="JzJ-hc-xMA"/>
+                        <constraint firstAttribute="width" constant="214" id="eZa-jX-vtS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Reset favorites">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="fireResetFavorites:" destination="-1" eventType="touchUpInside" id="jNR-xT-yig"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5SX-2s-LG3" secondAttribute="bottom" constant="20" id="93P-T6-iSN"/>
+                <constraint firstItem="5SX-2s-LG3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dtj-W7-yL3"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="133" y="154"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
         </view>
     </objects>
 </document>

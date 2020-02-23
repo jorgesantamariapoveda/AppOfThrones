@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol FavoriteDelegate {
+    func didFavoriteChanged()
+}
+
 class DataController {
 
     // Definición mínima de un singleton

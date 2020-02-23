@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var resetFavoritesButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +22,11 @@ class SettingsViewController: UIViewController {
 
     func setupUI() {
         self.title = "Settings"
+        self.resetFavoritesButton.layer.cornerRadius = 4.0
     }
 
+    // MARK: - IBActions
+
+    @IBAction func fireResetFavorites(_ sender: UIButton) {
+    }
 }

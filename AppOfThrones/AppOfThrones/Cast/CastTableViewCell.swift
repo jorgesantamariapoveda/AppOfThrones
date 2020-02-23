@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol CastTableViewCellDelegate {
-    func didFavoriteChanged()
-}
-
 class CastTableViewCell: UITableViewCell {
 
     @IBOutlet weak var thumb: UIImageView!
@@ -21,7 +17,7 @@ class CastTableViewCell: UITableViewCell {
     @IBOutlet weak var heartButton: UIButton!
 
     private var cast: Cast?
-    var delegate: CastTableViewCellDelegate?
+    var delegate: FavoriteDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
