@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Cast: Identifiable {
+struct Cast: Identifiable, Codable {
 
     var id: Int
     var avatar: String?
     var fullname: String?
     var role: String?
-    var episode: Int?
+    var episodes: Int?
     var birth: String?
     var placeBirth: String?
 

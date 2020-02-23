@@ -12,10 +12,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
 
-    var episodes: [Episode] = [
-                        Episode.init(id: 123, name: "Name1", date: "Date1", image: "imagen1", episode: 1, season: 1, overview: "overview1"),
-                        Episode.init(id: 234, name: "Name2", date: "Date2", image: "imagen2", episode: 2, season: 2, overview: "overview2")
-    ]
+    var episodes: [Episode] = []
 
     deinit {
         // Si no se hace esto puede caerse la app
@@ -29,6 +26,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.setupUI()
         self.setupNotifications()
+        self.setupData()
     }
 
     // MARK: - Setups
@@ -47,6 +45,15 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         // En vez de crear uno específico se puede usar el que hay por defecto
         //let noteName = Notification.Name.init("DidFavoritesUpdated")
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
+    }
+
+    func setupData() {
+        if let pathURL = Bundle.main.url(forResource: "season_1", withExtension: "json") {
+            let data = try! Data.init(contentsOf: pathURL)
+            let decoder = JSONDecoder.init()
+            episodes = try! decoder.decode([Episode].self, from: data)
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - IBAction

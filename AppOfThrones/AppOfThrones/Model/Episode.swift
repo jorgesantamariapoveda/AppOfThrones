@@ -9,7 +9,7 @@
 import Foundation
 
 // Identifiable se puede aplicar tanto en class como en struct (ver Cast.swift)
-class Episode: Identifiable {
+class Episode: Identifiable, Codable {
 
     var id: Int
     var name: String?

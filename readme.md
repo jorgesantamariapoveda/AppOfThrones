@@ -19,6 +19,8 @@
 
 >Genéricos
 
->JSON (protocolo Codable). JSONEncoder, JSONDecoder. Se aprovecha para explicar gestión de errores try catch...
+>JSON (protocolo Codable). JSONDecoder. No se usa API, es app sencilla con json locales.
+
+>Gestión de errores try catch...
 
 >ARC weak unowned

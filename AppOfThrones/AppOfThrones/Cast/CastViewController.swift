@@ -12,11 +12,7 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
 
-    var cast: [Cast] = [
-                        Cast(id: 111, avatar: "avatar1", fullname: "fullname1", role: "rol1", episode: nil, birth: "1980", placeBirth: "Alicante"),
-                        Cast(id: 222, avatar: "avatar2", fullname: "fullname2", role: "rol2", episode: 2, birth: "1990", placeBirth: "Valencia"),
-                        Cast(id: 333, avatar: nil, fullname: "fullname3", role: "rol3", episode: 3, birth: "2000", placeBirth: "Castellón"),
-    ]
+    var cast: [Cast] = []
 
     deinit {
         NotificationCenter.default.removeObserver(self, name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
@@ -29,6 +25,7 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.setupUI()
         self.setupNotifications()
+        self.setupData()
     }
 
     // MARK: - Setups
@@ -46,6 +43,14 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func setupNotifications() {
         // En vez de crear uno específico se puede usar el que hay por defecto
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
+    }
+
+    func setupData() {
+        let pathURL = Bundle.main.url(forResource: "cast", withExtension: "json")!
+        let data = try! Data.init(contentsOf: pathURL)
+        let decoder = JSONDecoder.init()
+        cast = try! decoder.decode([Cast].self, from: data)
+        self.tableView.reloadData()
     }
 
     // MARK: - UITableViewDataSource

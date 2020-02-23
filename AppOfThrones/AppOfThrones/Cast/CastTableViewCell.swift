@@ -44,7 +44,7 @@ class CastTableViewCell: UITableViewCell {
         self.name.text = actor.fullname
         self.role.text = actor.role
         // 🚩 Como episode es opcional se ofrece un valor alternativo
-        self.episodes.text = "\(actor.episode ?? 0) episodes"
+        self.episodes.text = "\(actor.episodes ?? 0) episodes"
 
         let heartImageNamed = DataController.shared.isFavorite(actor) ? "heart.fill" : "heart"
         let heartImage = UIImage.init(systemName: heartImageNamed)
