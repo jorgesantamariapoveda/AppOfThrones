@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CastViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CastViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CastTableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -50,6 +50,7 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CastTableViewCell", for: indexPath) as? CastTableViewCell {
             let actor = cast[indexPath.row]
             cell.setCast(actor)
+            cell.delegate = self
             return cell
         }
         fatalError("OHHHHHHHH")
@@ -64,6 +65,12 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Celda pulsada en sección \(indexPath.section) y fila \(indexPath.row)")
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    // MARK: - CastTableViewCellDelegate
+
+    func didFavoriteChanged() {
+        self.tableView.reloadData()
     }
 
 }

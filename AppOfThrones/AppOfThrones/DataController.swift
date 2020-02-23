@@ -17,6 +17,26 @@ class DataController {
 
     // Private para evitar injerencias externas
     private var rating: [Rating] = []
+    // Para no extender mucho el ejercicio se adopta por Int en vez de algo más elaborado
+    // se guarda el id del personaje
+    private var favorite: [Int] = []
+
+    // MARK: - Favorite
+    func isFavoriteCast(_ cast: Cast) -> Bool {
+        return favorite.contains(cast.id)
+    }
+
+    func addFavoriteCast(_ cast: Cast) {
+        if self.isFavoriteCast(cast) == false {
+            favorite.append(cast.id)
+        }
+    }
+
+    func removeFavoriteCast(_ cast: Cast) {
+        if let index = favorite.firstIndex(of: cast.id) {
+            favorite.remove(at: index)
+        }
+    }
 
     // MARK: - Rating
 

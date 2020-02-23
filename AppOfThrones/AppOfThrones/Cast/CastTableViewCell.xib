@@ -59,6 +59,9 @@
                         </constraints>
                         <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="heartFire:" destination="TdY-55-or0" eventType="touchUpInside" id="xrn-EC-qis"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
