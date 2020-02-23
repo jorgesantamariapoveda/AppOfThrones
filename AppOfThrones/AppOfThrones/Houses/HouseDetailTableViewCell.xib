@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HouseDetailTableViewCell" rowHeight="172" id="Qyq-iE-P2D" customClass="HouseDetailTableViewCell" customModule="AppOfThrones" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qyq-iE-P2D" id="zY9-PU-5Cy">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMw-ZW-zVg">
+                        <rect key="frame" x="20" y="19.5" width="374" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ca1-RY-xMu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flu-32-cnM">
+                        <rect key="frame" x="20" y="50.5" width="374" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="pon-sn-3mX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HX-av-CdO">
+                        <rect key="frame" x="20" y="81.5" width="374" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="BhD-YH-ve9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="flu-32-cnM" firstAttribute="centerY" secondItem="zY9-PU-5Cy" secondAttribute="centerY" id="FsB-e0-uRM"/>
+                    <constraint firstItem="flu-32-cnM" firstAttribute="top" secondItem="BMw-ZW-zVg" secondAttribute="bottom" constant="10" id="Wb1-Sf-bfj"/>
+                    <constraint firstItem="flu-32-cnM" firstAttribute="leading" secondItem="zY9-PU-5Cy" secondAttribute="leading" constant="20" id="Zy0-NW-esr"/>
+                    <constraint firstItem="2HX-av-CdO" firstAttribute="leading" secondItem="zY9-PU-5Cy" secondAttribute="leadingMargin" id="f0o-XN-nx5"/>
+                    <constraint firstItem="2HX-av-CdO" firstAttribute="trailing" secondItem="zY9-PU-5Cy" secondAttribute="trailingMargin" id="iCz-hW-e6S"/>
+                    <constraint firstAttribute="trailing" secondItem="BMw-ZW-zVg" secondAttribute="trailing" constant="20" id="lNK-Ff-20B"/>
+                    <constraint firstAttribute="trailing" secondItem="flu-32-cnM" secondAttribute="trailing" constant="20" id="mDQ-QF-Z1W"/>
+                    <constraint firstItem="BMw-ZW-zVg" firstAttribute="leading" secondItem="zY9-PU-5Cy" secondAttribute="leading" constant="20" id="rre-fS-DpC"/>
+                    <constraint firstItem="2HX-av-CdO" firstAttribute="top" secondItem="flu-32-cnM" secondAttribute="bottom" constant="10" id="tI7-oa-mgL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="name" destination="BMw-ZW-zVg" id="ljU-cX-W6r"/>
+                <outlet property="seat" destination="2HX-av-CdO" id="QUf-av-JLh"/>
+                <outlet property="words" destination="flu-32-cnM" id="OOf-ZL-fWc"/>
+            </connections>
+            <point key="canvasLocation" x="142.02898550724638" y="75"/>
+        </tableViewCell>
+    </objects>
+</document>

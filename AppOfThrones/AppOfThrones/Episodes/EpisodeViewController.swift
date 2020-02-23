@@ -107,10 +107,6 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return false // Se desactiva el tap
-    }
-
     // MARK: - EpisodeRateViewControllerDelegate
 
     @objc func didRateChangued() {
