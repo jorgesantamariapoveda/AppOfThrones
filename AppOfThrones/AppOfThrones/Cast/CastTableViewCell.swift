@@ -31,8 +31,6 @@ class CastTableViewCell: UITableViewCell {
         self.thumb.layer.cornerRadius = 4.0
         self.thumb.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
         self.thumb.layer.borderWidth = 1.0
-
-        //...aqui mirare estado del icono del corazon, pero necesito el cast???
     }
 
     // MARK: - Public functions

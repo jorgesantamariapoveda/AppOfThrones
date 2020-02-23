@@ -47,6 +47,11 @@ class RateViewController: UIViewController {
         self.acceptButton.layer.cornerRadius = 4.0
         self.image.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
         self.image.layer.borderWidth = 1.0
+        self.image.layer.cornerRadius = 4.0
+
+        if let nameImage = episode?.image {
+            self.image.image = UIImage.init(named: nameImage)
+        }
     }
 
     // MARK: - IBActions

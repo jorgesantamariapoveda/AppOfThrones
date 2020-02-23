@@ -46,11 +46,18 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func setupData() {
-        let pathURL = Bundle.main.url(forResource: "cast", withExtension: "json")!
-        let data = try! Data.init(contentsOf: pathURL)
-        let decoder = JSONDecoder.init()
-        cast = try! decoder.decode([Cast].self, from: data)
-        self.tableView.reloadData()
+        if let pathURL = Bundle.main.url(forResource: "cast", withExtension: "json") {
+            do {
+                let data = try Data.init(contentsOf: pathURL)
+                let decoder = JSONDecoder.init()
+                cast = try decoder.decode([Cast].self, from: data)
+                self.tableView.reloadData()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+        } else {
+            fatalError("☠️ JSON-Cast")
+        }
     }
 
     // MARK: - UITableViewDataSource

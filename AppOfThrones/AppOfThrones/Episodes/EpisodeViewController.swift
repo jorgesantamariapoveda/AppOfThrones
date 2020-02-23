@@ -26,7 +26,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         self.setupUI()
         self.setupNotifications()
-        self.setupData()
+        self.setupData(1)
     }
 
     // MARK: - Setups
@@ -47,25 +47,26 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
     }
 
-    func setupData() {
-        if let pathURL = Bundle.main.url(forResource: "season_1", withExtension: "json") {
-            let data = try! Data.init(contentsOf: pathURL)
-            let decoder = JSONDecoder.init()
-            episodes = try! decoder.decode([Episode].self, from: data)
-            self.tableView.reloadData()
+    func setupData(_ seasonNumber: Int) {
+        if let pathURL = Bundle.main.url(forResource: "season_\(seasonNumber)", withExtension: "json") {
+            do {
+                let data = try Data.init(contentsOf: pathURL)
+                let decoder = JSONDecoder.init()
+                episodes = try decoder.decode([Episode].self, from: data)
+                self.tableView.reloadData()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+        } else {
+            fatalError("☠️ JSON-Episode")
         }
     }
 
     // MARK: - IBAction
-    
-    //🚩
-//    @IBAction func fireRate(_ sender: UIButton) {
-//        let rateViewController = RateViewController()
-//        //rateViewController.modalTransitionStyle = .crossDissolve
-//        rateViewController.modalPresentationStyle = .fullScreen
-//        self.present(rateViewController, animated: true, completion: nil)
-//    }
 
+    @IBAction func fireSlider(_ sender: UISegmentedControl) {
+        self.setupData(sender.selectedSegmentIndex + 1)
+    }
 
     // MARK: - UITableViewDataSource
 
