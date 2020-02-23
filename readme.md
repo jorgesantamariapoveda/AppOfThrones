@@ -1,4 +1,4 @@
-# Práctica de Fundamentos iOS
+# Fundamentos iOS. Práctica
 
 **Elementos más destacados**
 >XIB para la creación del interfaz (nada de storyboards)
