@@ -15,6 +15,8 @@ class HouseDetailViewController: UIViewController {
         self.title = title
     }
 
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

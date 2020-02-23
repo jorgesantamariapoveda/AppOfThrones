@@ -19,6 +19,8 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         House(imageName: "Casa4", name: "Casa4", words: "Lema4", seat: "Local4")
     ]
     
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -33,6 +33,8 @@ class RateViewController: UIViewController {
         self.title = episode.name
     }
 
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
