@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SX-2s-LG3">
-                    <rect key="frame" x="100" y="785" width="214" height="57"/>
+                    <rect key="frame" x="100" y="419.5" width="214" height="57"/>
                     <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="57" id="JzJ-hc-xMA"/>
@@ -36,8 +36,8 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5SX-2s-LG3" secondAttribute="bottom" constant="20" id="93P-T6-iSN"/>
-                <constraint firstItem="5SX-2s-LG3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dtj-W7-yL3"/>
+                <constraint firstItem="5SX-2s-LG3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3ew-AW-VmH"/>
+                <constraint firstItem="5SX-2s-LG3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ugg-Ac-ccc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>

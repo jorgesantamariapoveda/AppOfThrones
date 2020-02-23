@@ -12,19 +12,15 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var tableView: UITableView!
 
-    var houses: [House] = [
-                        House(imageName: "Casa1", name: "Casa1", words: "Lema1", seat: "Local1"),
-                        House(imageName: "Casa2", name: "Casa2", words: "Lema2", seat: "Local2"),
-                        House(imageName: "Casa3", name: "Casa3", words: "Lema3", seat: "Local3"),
-                        House(imageName: "Casa4", name: "Casa4", words: "Lema4", seat: "Local4")
-    ]
-    
+    var houses: [House] = []
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupUI()
+        self.setupData()
     }
 
     // MARK: - Setups
@@ -37,6 +33,21 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
+
+    func setupData() {
+        if let pathURL = Bundle.main.url(forResource: "houses", withExtension: "json") {
+            do {
+                let data = try Data.init(contentsOf: pathURL)
+                let decoder = JSONDecoder.init()
+                houses = try decoder.decode([House].self, from: data)
+                self.tableView.reloadData()
+            } catch {
+                fatalError(error.localizedDescription)
+            }
+        } else {
+            fatalError("☠️ JSON-House")
+        }
     }
 
     // MARK: - UITableViewDataSource
@@ -55,13 +66,13 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.setHouse(house)
             return cell
         }
-        fatalError("OHHHHHHHH")
+        fatalError("☠️ Cell-House")
     }
 
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 115
+        return 130
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

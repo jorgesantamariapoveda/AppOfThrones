@@ -91,7 +91,7 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.delegate = self
             return cell
         }
-        fatalError("OHHHHHHHH")
+        fatalError("☠️ Cell-Episode")
     }
 
     // MARK: - UITableViewDelegate

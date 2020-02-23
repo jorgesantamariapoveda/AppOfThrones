@@ -77,7 +77,7 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.delegate = self
             return cell
         }
-        fatalError("OHHHHHHHH")
+        fatalError("☠️ Cell-Cast")
     }
 
     // MARK: - UITableViewDelegate
