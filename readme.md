@@ -19,8 +19,6 @@
 
 >Genéricos
 
->Gestión de errores try catch throws
-
->JSON
+>JSON (protocolo Codable). JSONEncoder, JSONDecoder. Se aprovecha para explicar gestión de errores try catch...
 
 >ARC weak unowned
