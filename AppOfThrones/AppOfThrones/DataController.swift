@@ -12,6 +12,10 @@ protocol FavoriteDelegate {
     func didFavoriteChanged()
 }
 
+protocol Identifiable {
+    var id: Int { get }
+}
+
 class DataController {
 
     // Definición mínima de un singleton
@@ -26,34 +30,19 @@ class DataController {
     private var favorite: [Int] = []
 
     // MARK: - Favorite
-    func isFavoriteCast(_ cast: Cast) -> Bool {
-        return favorite.contains(cast.id)
+
+    func isFavorite<T: Identifiable>(_ value: T) -> Bool {
+        return favorite.contains(value.id)
     }
 
-    func addFavoriteCast(_ cast: Cast) {
-        if self.isFavoriteCast(cast) == false {
-            favorite.append(cast.id)
+    func addFavorite<T: Identifiable>(_ value: T) {
+        if self.isFavorite(value) == false {
+            favorite.append(value.id)
         }
     }
 
-    func removeFavoriteCast(_ cast: Cast) {
-        if let index = favorite.firstIndex(of: cast.id) {
-            favorite.remove(at: index)
-        }
-    }
-
-    func isFavoriteEpisode(_ episode: Episode) -> Bool {
-        return favorite.contains(episode.id)
-    }
-
-    func addFavoriteEpisode(_ episode: Episode) {
-        if self.isFavoriteEpisode(episode) == false {
-            favorite.append(episode.id)
-        }
-    }
-
-    func removeFavoriteEpisode(_ episode: Episode) {
-        if let index = favorite.firstIndex(of: episode.id) {
+    func removeFavorite<T: Identifiable>(_ value: T) {
+        if let index = favorite.firstIndex(of: value.id) {
             favorite.remove(at: index)
         }
     }

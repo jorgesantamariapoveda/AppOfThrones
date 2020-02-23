@@ -46,7 +46,7 @@ class CastTableViewCell: UITableViewCell {
         // 🚩 Como episode es opcional se ofrece un valor alternativo
         self.episodes.text = "\(actor.episode ?? 0) episodes"
 
-        let heartImageNamed = DataController.shared.isFavoriteCast(actor) ? "heart.fill" : "heart"
+        let heartImageNamed = DataController.shared.isFavorite(actor) ? "heart.fill" : "heart"
         let heartImage = UIImage.init(systemName: heartImageNamed)
         self.heartButton.setImage(heartImage, for: .normal)
     }
@@ -55,10 +55,10 @@ class CastTableViewCell: UITableViewCell {
 
     @IBAction func heartFire(_ sender: Any) {
         if let actor = self.cast {
-            if DataController.shared.isFavoriteCast(actor) == true {
-                DataController.shared.removeFavoriteCast(actor)
+            if DataController.shared.isFavorite(actor) == true {
+                DataController.shared.removeFavorite(actor)
             } else {
-                DataController.shared.addFavoriteCast(actor)
+                DataController.shared.addFavorite(actor)
             }
             delegate?.didFavoriteChanged()
         }

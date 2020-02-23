@@ -62,7 +62,7 @@ class EpisodeTableViewCell: UITableViewCell {
             self.modeRate()
         }
 
-        let heartImageName = DataController.shared.isFavoriteEpisode(episode) ? "heart.fill" : "heart"
+        let heartImageName = DataController.shared.isFavorite(episode) ? "heart.fill" : "heart"
         let heartImage = UIImage.init(systemName: heartImageName)
         self.heartButton.setImage(heartImage, for: .normal)
     }
@@ -81,10 +81,10 @@ class EpisodeTableViewCell: UITableViewCell {
 
     @IBAction func fireHeart(_ sender: UIButton) {
         if let episode = self.episode {
-            if DataController.shared.isFavoriteEpisode(episode) == true {
-                DataController.shared.removeFavoriteEpisode(episode)
+            if DataController.shared.isFavorite(episode) == true {
+                DataController.shared.removeFavorite(episode)
             } else {
-                DataController.shared.addFavoriteEpisode(episode)
+                DataController.shared.addFavorite(episode)
             }
             self.delegate?.didFavoriteChanged()
         }
