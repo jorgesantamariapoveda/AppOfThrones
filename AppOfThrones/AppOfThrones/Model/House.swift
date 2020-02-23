@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct House: Codable {
+struct House: Identifiable, Codable {
 
+    var id: Int
     var imageName: String?
     var name: String?
     var words: String?

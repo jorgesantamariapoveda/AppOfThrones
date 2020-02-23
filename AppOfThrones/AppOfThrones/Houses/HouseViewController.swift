@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FavoriteDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -20,7 +20,12 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         self.setupUI()
+        self.setupNotifications()
         self.setupData()
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
     }
 
     // MARK: - Setups
@@ -33,6 +38,11 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+    }
+
+    func setupNotifications() {
+        // En vez de crear uno específico se puede usar el que hay por defecto
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didFavoriteChanged), name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
     }
 
     func setupData() {
@@ -64,6 +74,7 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseTableViewCell", for: indexPath) as? HouseTableViewCell {
             let house = houses[indexPath.row]
             cell.setHouse(house)
+            cell.delegate = self
             return cell
         }
         fatalError("☠️ Cell-House")
@@ -83,4 +94,11 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.navigationController?.pushViewController(houseDetailViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
+    // MARK: - FavoriteDelegate
+
+    @objc func didFavoriteChanged() {
+        self.tableView.reloadData()
+    }
+
 }
