@@ -29,8 +29,8 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - Setups
 
     func setupUI() {
-        let nibDetailLogo = UINib(nibName: "HouseDetailLogoTableViewCell", bundle: nil)
-        self.tableView.register(nibDetailLogo, forCellReuseIdentifier: "HouseDetailLogoTableViewCell")
+        let nibDetailLogo = UINib(nibName: "DetailLogoTableViewCell", bundle: nil)
+        self.tableView.register(nibDetailLogo, forCellReuseIdentifier: "DetailLogoTableViewCell")
 
         let nibDetailHouse = UINib(nibName: "HouseDetailTableViewCell", bundle: nil)
         self.tableView.register(nibDetailHouse, forCellReuseIdentifier: "HouseDetailTableViewCell")
@@ -57,7 +57,7 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "HouseDetailLogoTableViewCell", for: indexPath) as? HouseDetailLogoTableViewCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailLogoTableViewCell", for: indexPath) as? DetailLogoTableViewCell {
                 cell.setImageName(house?.name)
                 return cell
             }
@@ -75,7 +75,7 @@ class HouseDetailViewController: UIViewController, UITableViewDelegate, UITableV
     // MARK: - UITableViewDelegate
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 374 : 130
+        return indexPath.row == 0 ? 414 : 122
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

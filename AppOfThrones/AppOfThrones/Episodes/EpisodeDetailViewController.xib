@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeDetailViewController" customModule="AppOfThrones" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Jip-0U-0Yj" id="xCk-aO-QsE"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gD8-wV-yq0"/>
             </connections>
         </placeholder>

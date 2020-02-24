@@ -103,7 +103,10 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Celda pulsada en sección \(indexPath.section) y fila \(indexPath.row)")
+        let episode = episodes[indexPath.row]
+        let episodeDetailViewController = EpisodeDetailViewController()
+        episodeDetailViewController.setEpisode(episode)
+        self.navigationController?.pushViewController(episodeDetailViewController, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
