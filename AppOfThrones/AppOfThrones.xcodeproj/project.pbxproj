@@ -11,6 +11,10 @@
 		CF4613F324045E43002B9C72 /* DetailLogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4613F224045E43002B9C72 /* DetailLogoTableViewCell.xib */; };
 		CF4613F5240461C9002B9C72 /* EpisodeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4613F4240461C9002B9C72 /* EpisodeDetailTableViewCell.swift */; };
 		CF4613F7240461EC002B9C72 /* EpisodeDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4613F6240461EC002B9C72 /* EpisodeDetailTableViewCell.xib */; };
+		CF4613F924046AA5002B9C72 /* CastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4613F824046AA5002B9C72 /* CastDetailViewController.swift */; };
+		CF4613FB24046AD6002B9C72 /* CastDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4613FA24046AD6002B9C72 /* CastDetailViewController.xib */; };
+		CF4613FD24046B43002B9C72 /* CastDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4613FC24046B43002B9C72 /* CastDetailTableViewCell.swift */; };
+		CF4613FF24046B7A002B9C72 /* CastDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4613FE24046B7A002B9C72 /* CastDetailTableViewCell.xib */; };
 		CFB37E3B2400555000407010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E3A2400555000407010 /* AppDelegate.swift */; };
 		CFB37E3D2400555000407010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB37E3C2400555000407010 /* SceneDelegate.swift */; };
 		CFB37E442400555200407010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB37E432400555200407010 /* Assets.xcassets */; };
@@ -62,6 +66,10 @@
 		CF4613F224045E43002B9C72 /* DetailLogoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLogoTableViewCell.xib; sourceTree = "<group>"; };
 		CF4613F4240461C9002B9C72 /* EpisodeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		CF4613F6240461EC002B9C72 /* EpisodeDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeDetailTableViewCell.xib; sourceTree = "<group>"; };
+		CF4613F824046AA5002B9C72 /* CastDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDetailViewController.swift; sourceTree = "<group>"; };
+		CF4613FA24046AD6002B9C72 /* CastDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastDetailViewController.xib; sourceTree = "<group>"; };
+		CF4613FC24046B43002B9C72 /* CastDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastDetailTableViewCell.swift; sourceTree = "<group>"; };
+		CF4613FE24046B7A002B9C72 /* CastDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastDetailTableViewCell.xib; sourceTree = "<group>"; };
 		CFB37E372400555000407010 /* AppOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB37E3A2400555000407010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB37E3C2400555000407010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,6 +220,10 @@
 				CFB37E5E240069B600407010 /* CastViewController.xib */,
 				CFFABACF240159D8004E4E5C /* CastTableViewCell.swift */,
 				CFFABAD124015A0A004E4E5C /* CastTableViewCell.xib */,
+				CF4613F824046AA5002B9C72 /* CastDetailViewController.swift */,
+				CF4613FA24046AD6002B9C72 /* CastDetailViewController.xib */,
+				CF4613FC24046B43002B9C72 /* CastDetailTableViewCell.swift */,
+				CF4613FE24046B7A002B9C72 /* CastDetailTableViewCell.xib */,
 			);
 			path = Cast;
 			sourceTree = "<group>";
@@ -320,6 +332,7 @@
 				CFB37E6824006B6800407010 /* HouseViewController.xib in Resources */,
 				CFFF1A572402D262000318DB /* season_6.json in Resources */,
 				CFFABAE0240186E9004E4E5C /* HouseDetailViewController.xib in Resources */,
+				CF4613FF24046B7A002B9C72 /* CastDetailTableViewCell.xib in Resources */,
 				CFFF1A542402D262000318DB /* season_2.json in Resources */,
 				CFFF1A592402D262000318DB /* season_1.json in Resources */,
 				CFFF1A562402D262000318DB /* season_3.json in Resources */,
@@ -327,6 +340,7 @@
 				CFFF1A5D2402FB98000318DB /* EpisodeDetailViewController.xib in Resources */,
 				CF4613F7240461EC002B9C72 /* EpisodeDetailTableViewCell.xib in Resources */,
 				CFFF1A532402D262000318DB /* cast.json in Resources */,
+				CF4613FB24046AD6002B9C72 /* CastDetailViewController.xib in Resources */,
 				CFB37E6D24006BF600407010 /* FavoritesViewController.xib in Resources */,
 				CF4613F324045E43002B9C72 /* DetailLogoTableViewCell.xib in Resources */,
 				CFFF1A512402D262000318DB /* houses.json in Resources */,
@@ -352,6 +366,8 @@
 				CFFABADA24017B92004E4E5C /* HouseTableViewCell.swift in Sources */,
 				CFFABACC24014682004E4E5C /* EpisodeTableViewCell.swift in Sources */,
 				CF4613F5240461C9002B9C72 /* EpisodeDetailTableViewCell.swift in Sources */,
+				CF4613FD24046B43002B9C72 /* CastDetailTableViewCell.swift in Sources */,
+				CF4613F924046AA5002B9C72 /* CastDetailViewController.swift in Sources */,
 				CFFABAD424015D6E004E4E5C /* Cast.swift in Sources */,
 				CFB37E61240069FF00407010 /* SettingsViewController.swift in Sources */,
 				CFB37E542400638100407010 /* EpisodeViewController.swift in Sources */,

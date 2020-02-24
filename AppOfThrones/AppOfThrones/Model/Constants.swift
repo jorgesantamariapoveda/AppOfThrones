@@ -11,4 +11,6 @@ import Foundation
 struct Constants {
     static let kNoteNameDidFavoritesUpdated = Notification.Name.init("DidFavoritesUpdated")
     static let kNoteNameDidRateUpdated = Notification.Name.init("DidRateUpdated")
+
+    static let kTextIndefined = "-"
 }
