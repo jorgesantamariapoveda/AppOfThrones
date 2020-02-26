@@ -21,9 +21,15 @@ class HouseDetailTableViewCell: UITableViewCell {
     // MARK: - Public functions
 
     func setHouse(_ house: House?) {
-        self.name.text = house?.name
-        self.words.text = house?.words
-        self.seat.text = house?.seat
+        if let houseOk = house {
+            self.name.text = houseOk.description
+            self.words.text = houseOk.words
+            self.seat.text = houseOk.seat
+        } else {
+            self.name.text = Constants.kTextIndefined
+            self.words.text = Constants.kTextIndefined
+            self.seat.text = Constants.kTextIndefined
+        }
     }
 
 }

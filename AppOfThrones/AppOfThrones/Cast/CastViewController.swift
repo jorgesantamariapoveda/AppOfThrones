@@ -38,6 +38,8 @@ class CastViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+
+        self.tableView.separatorStyle = .none
     }
 
     func setupNotifications() {

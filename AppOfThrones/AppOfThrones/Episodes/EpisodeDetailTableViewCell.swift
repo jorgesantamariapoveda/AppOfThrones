@@ -32,10 +32,15 @@ class EpisodeDetailTableViewCell: UITableViewCell {
 
     func setEpisode(_ episode: Episode?) {
         if let ep = episode {
-            self.episodeSeason.text = "[Season \(ep.season) - Episode \(ep.episode)]"
+            self.episodeSeason.text = ep.description
             self.name.text = ep.name
             self.date.text = ep.date
             self.overview.text = ep.overview
+        } else {
+            self.episodeSeason.text = Constants.kTextIndefined
+            self.name.text = Constants.kTextIndefined
+            self.date.text = Constants.kTextIndefined
+            self.overview.text = Constants.kTextIndefined
         }
     }
     

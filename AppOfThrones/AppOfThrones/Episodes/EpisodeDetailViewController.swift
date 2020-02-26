@@ -32,6 +32,8 @@ class EpisodeDetailViewController: UIViewController, UITableViewDataSource, UITa
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+
+        self.tableView.separatorStyle = .none
     }
 
     // MARK: - Public functions

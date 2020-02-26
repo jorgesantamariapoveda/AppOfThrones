@@ -9,7 +9,7 @@
 import Foundation
 
 // Identifiable se puede aplicar tanto en class como en struct (ver Cast.swift)
-class Episode: Identifiable, Codable {
+class Episode: Identifiable, Codable, CustomStringConvertible, Equatable {
 
     var id: Int
     var name: String?
@@ -18,6 +18,20 @@ class Episode: Identifiable, Codable {
     var episode: Int
     var season: Int
     var overview: String
+
+    // MARK: - CustomStringConvertible
+
+    var description: String {
+        return "[Episode \(self.episode) - Season \(self.season)]"
+    }
+
+    // MARK: - Equatable
+    
+    static func == (lhs: Episode, rhs: Episode) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    // MARK: - Inits
 
     init(id: Int, name: String?, date: String?, image: String?, episode: Int, season: Int, overview: String) {
         self.id = id

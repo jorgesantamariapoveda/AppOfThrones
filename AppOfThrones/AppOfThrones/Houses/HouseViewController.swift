@@ -38,6 +38,8 @@ class HouseViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+
+        self.tableView.separatorStyle = .none
     }
 
     func setupNotifications() {
