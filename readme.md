@@ -1,5 +1,12 @@
 # Fundamentos iOS. Práctica
 
+**Algunas mejoras**
+>Se establece en Constants una serie de constantes usadas en varios puntos de la app
+
+>Se muestra los detalles de las casas
+
+>Se reutiliza la DetailLogoTableViewCell para todas las imágenes en vista de detalle de episodio, actor y casa
+
 **Elementos más destacados**
 >XIB para la creación del interfaz (nada de storyboards)
 
