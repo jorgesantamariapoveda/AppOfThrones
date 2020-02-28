@@ -9,21 +9,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeFavoriteTableViewCell" rowHeight="107" id="THA-CC-xHa" customClass="EpisodeFavoriteTableViewCell" customModule="AppOfThrones" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="THA-CC-xHa" id="9Ug-XD-hOD">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-Bd-ebq">
-                        <rect key="frame" x="20" y="7.5" width="95" height="95"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gd8-Bd-ebq">
+                        <rect key="frame" x="20" y="12.5" width="160" height="105"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="95" id="1cG-bi-kMT"/>
-                            <constraint firstAttribute="width" constant="95" id="9t1-FX-0zc"/>
+                            <constraint firstAttribute="height" constant="105" id="1cG-bi-kMT"/>
+                            <constraint firstAttribute="width" constant="160" id="9t1-FX-0zc"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1md-xg-lpT">
-                        <rect key="frame" x="125" y="10" width="269" height="21"/>
+                        <rect key="frame" x="190" y="10" width="204" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="lR2-jM-7NG"/>
                         </constraints>
@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVl-zH-QyY">
-                        <rect key="frame" x="125" y="39" width="269" height="21"/>
+                        <rect key="frame" x="190" y="39" width="204" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="0s6-oZ-TMm"/>
                         </constraints>

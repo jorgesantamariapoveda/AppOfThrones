@@ -86,6 +86,7 @@ class EpisodeTableViewCell: UITableViewCell {
             } else {
                 DataController.shared.addFavorite(episode)
             }
+            NotificationCenter.default.post(name: Constants.kNoteNameDidFavoritesUpdated, object: nil)
             self.delegate?.didFavoriteChanged()
         }
     }

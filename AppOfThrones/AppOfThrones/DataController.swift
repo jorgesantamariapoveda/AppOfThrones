@@ -29,6 +29,8 @@ class DataController {
     // se guarda el id del personaje
     private var favorite: [Int] = []
 
+    private var favoriteEpisodes: [Episode] = []
+
     // MARK: - Favorite
 
     func isFavorite<T: Identifiable>(_ value: T) -> Bool {
@@ -38,6 +40,10 @@ class DataController {
     func addFavorite<T: Identifiable>(_ value: T) {
         if self.isFavorite(value) == false {
             favorite.append(value.id)
+
+            if let episode = value as? Episode {
+                favoriteEpisodes.append(episode)
+            }
         }
     }
 
@@ -45,10 +51,27 @@ class DataController {
         if let index = favorite.firstIndex(of: value.id) {
             favorite.remove(at: index)
         }
+
+        if let episode = value as? Episode {
+            if let index = favoriteEpisodes.firstIndex(of: episode) {
+                favoriteEpisodes.remove(at: index)
+            }
+        }
     }
 
     func cleanFavorite() {
         favorite.removeAll() // o también favorite = []
+        favoriteEpisodes.removeAll()
+    }
+
+    // MARK: - FavoriteEpisodes
+
+    func numFavoriteEpisodes() -> Int {
+        return self.favoriteEpisodes.count
+    }
+
+    func getFavoriteEpisode(_ index: Int) -> Episode {
+        return self.favoriteEpisodes[index]
     }
 
     // MARK: - Rating
