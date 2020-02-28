@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF3659CB24097B3000E14B9A /* EpisodeFavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3659CA24097B3000E14B9A /* EpisodeFavoriteTableViewCell.swift */; };
+		CF3659CD24097B5E00E14B9A /* EpisodeFavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF3659CC24097B5E00E14B9A /* EpisodeFavoriteTableViewCell.xib */; };
 		CF4613F124045E0D002B9C72 /* DetailLogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4613F024045E0D002B9C72 /* DetailLogoTableViewCell.swift */; };
 		CF4613F324045E43002B9C72 /* DetailLogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4613F224045E43002B9C72 /* DetailLogoTableViewCell.xib */; };
 		CF4613F5240461C9002B9C72 /* EpisodeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4613F4240461C9002B9C72 /* EpisodeDetailTableViewCell.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF3659CA24097B3000E14B9A /* EpisodeFavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeFavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		CF3659CC24097B5E00E14B9A /* EpisodeFavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeFavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		CF4613F024045E0D002B9C72 /* DetailLogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLogoTableViewCell.swift; sourceTree = "<group>"; };
 		CF4613F224045E43002B9C72 /* DetailLogoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLogoTableViewCell.xib; sourceTree = "<group>"; };
 		CF4613F4240461C9002B9C72 /* EpisodeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 			children = (
 				CFB37E6A24006BDF00407010 /* FavoritesViewController.swift */,
 				CFB37E6C24006BF600407010 /* FavoritesViewController.xib */,
+				CF3659CA24097B3000E14B9A /* EpisodeFavoriteTableViewCell.swift */,
+				CF3659CC24097B5E00E14B9A /* EpisodeFavoriteTableViewCell.xib */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				CFFF1A542402D262000318DB /* season_2.json in Resources */,
 				CFFF1A592402D262000318DB /* season_1.json in Resources */,
 				CFFF1A562402D262000318DB /* season_3.json in Resources */,
+				CF3659CD24097B5E00E14B9A /* EpisodeFavoriteTableViewCell.xib in Resources */,
 				CFB37E562400639D00407010 /* EpisodeViewController.xib in Resources */,
 				CFFF1A5D2402FB98000318DB /* EpisodeDetailViewController.xib in Resources */,
 				CF4613F7240461EC002B9C72 /* EpisodeDetailTableViewCell.xib in Resources */,
@@ -373,6 +380,7 @@
 				CFB37E542400638100407010 /* EpisodeViewController.swift in Sources */,
 				CFFABAD0240159D8004E4E5C /* CastTableViewCell.swift in Sources */,
 				CFB37E592400652600407010 /* Episode.swift in Sources */,
+				CF3659CB24097B3000E14B9A /* EpisodeFavoriteTableViewCell.swift in Sources */,
 				CFFF1A5B2402FB5C000318DB /* EpisodeDetailViewController.swift in Sources */,
 				CFB37E3D2400555000407010 /* SceneDelegate.swift in Sources */,
 				CFFF1A6324030821000318DB /* HouseDetailTableViewCell.swift in Sources */,
