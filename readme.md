@@ -1,33 +1,34 @@
-# Fundamentos iOS. Práctica
+# Práctica de Fundamentos iOS
 
-**Algunas mejoras**
->Se establece en Constants una serie de constantes usadas en varios puntos de la app
+Aplicación basada en la popular serie Juego de tronos (_Game of Thrones_)
 
->Se muestra los detalles de las casas
+## Tecnologías
 
->Se reutiliza la DetailLogoTableViewCell para todas las imágenes en vista de detalle de episodio, actor y casa
+- Xcode
+- Swift
+  -- UI: XIB, AutoLayout, UITabBarController, UINavigationController, UITableView, UITableViewCell, etc
+  -- JSON, JSONDecoder, Codable
+  -- ARC weak, unowned, try catch, etc
+  -- Generics, Protocols, Enum, Clousure, etc
+  -- Design Patterns: MVC, Singleton, Delegate, NotificationCenter
 
-**Elementos más destacados**
->XIB para la creación del interfaz (nada de storyboards)
+## Especificaciones
 
->Opcionales
+- Lista de episodios mostrando su detalle al hacer tap sobre la celda.
+- Lista de actores mostrando su detalle al hacer tap sobre la celda.
+- Lista de casas mostrando su detalle al hacer tap sobre la celda.
+- Toda la información mostrada será obtenida a partir de diferentes **json**.
+- Episodios, Actores y Casas podrán ser seleccionados como _Favoritos_ por medio de un icono en forma de corazón, cambiando de hueco a relleno. Dicha selección de favoritos será mostrada en su correspondiente lista que deberá refrescarse automáticamente.
+- Cada episodio puede ser valorado de 0 a 5 estrellas por medio del botón _Rate_.
+- Mostrar en la pantalla _Settings_ un par de botones para poder eliminar reviews y favoritos, lógicamente ello afectará al refresco de los elementos implicados.
 
->Autolayout
+##### Capturas de pantallas
 
->UITabBarController y UINavigationController
-
->Ciclo de vida de un UIViewController
-
->UITableView y UITableViewCell
-
->Protocolos, Enum y patrón Singleton
-
->Patrones de comunicación: Clousure, Delegate y NotificationCenter
-
->Genéricos
-
->JSON (protocolo Codable). JSONDecoder. No se usa API, es app sencilla con json locales.
-
->Gestión de errores try catch...
-
->ARC weak unowned
+![signin](./episode.png "Episodes")
+![signup](./detailEpisode.png "Detail episodes")
+![topics](./cast.png "Cast")
+![newTopic](./detailCast.png "Detail cast")
+![posts](./house.png "Houses")
+![newPosts](./detailHouse.png "Detail houses")
+![newPosts](./favorites.png "Favorites")
+![newPosts](./settings.png "Settings")
