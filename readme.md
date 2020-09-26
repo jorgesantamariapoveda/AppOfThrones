@@ -6,10 +6,15 @@ Aplicación basada en la popular serie Juego de tronos (_Game of Thrones_)
 
 - Xcode
 - Swift
+
   -- UI: XIB, AutoLayout, UITabBarController, UINavigationController, UITableView, UITableViewCell, etc
+
   -- JSON, JSONDecoder, Codable
+
   -- ARC weak, unowned, try catch, etc
+
   -- Generics, Protocols, Enum, Clousure, etc
+
   -- Design Patterns: MVC, Singleton, Delegate, NotificationCenter
 
 ## Especificaciones
@@ -24,11 +29,11 @@ Aplicación basada en la popular serie Juego de tronos (_Game of Thrones_)
 
 ##### Capturas de pantallas
 
-![signin](./episode.png "Episodes")
-![signup](./detailEpisode.png "Detail episodes")
-![topics](./cast.png "Cast")
-![newTopic](./detailCast.png "Detail cast")
-![posts](./house.png "Houses")
-![newPosts](./detailHouse.png "Detail houses")
-![newPosts](./favorites.png "Favorites")
-![newPosts](./settings.png "Settings")
+![signin](./screenshots/episode.png "Episodes")
+![signup](./screenshots/detailEpisode.png "Detail episodes")
+![topics](./screenshots/cast.png "Cast")
+![newTopic](./screenshots/detailCast.png "Detail cast")
+![posts](./screenshots/house.png "Houses")
+![newPosts](./screenshots/detailHouse.png "Detail houses")
+![newPosts](./screenshots/favorites.png "Favorites")
+![newPosts](./screenshots/settings.png "Settings")
