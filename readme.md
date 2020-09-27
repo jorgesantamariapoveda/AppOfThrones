@@ -1,4 +1,4 @@
-# Práctica de Fundamentos iOS
+# 01 Fundamentos iOS
 
 Aplicación basada en la popular serie Juego de tronos (_Game of Thrones_)
 
