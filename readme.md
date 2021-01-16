@@ -1,21 +1,16 @@
-# 01 Fundamentos iOS
+## Objetivo
+Asentar los fundamentos en el desarrollo de aplicaciones iOS.
 
-Aplicación basada en la popular serie Juego de tronos (_Game of Thrones_)
-
-## Tecnologías
-
-- Xcode
 - Swift
-
-  -- UI: XIB, AutoLayout, UITabBarController, UINavigationController, UITableView, UITableViewCell, etc
-
-  -- JSON, JSONDecoder, Codable
-
-  -- ARC weak, unowned, try catch, etc
-
-  -- Generics, Protocols, Enum, Clousure, etc
-
-  -- Design Patterns: MVC, Singleton, Delegate, NotificationCenter
+- Xcode
+- MVC
+- Storyboards, XIB, AutoLayout.
+- UITabBarController, UINavigationController.
+- UITableView
+- JSON, JSONDecoder, Codable
+- ARC weak, unowned
+- Generics, Protocols, Clousure
+- Singleton, Delegate, NotificationCenter
 
 ## Especificaciones
 
