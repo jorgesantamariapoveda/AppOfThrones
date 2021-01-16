@@ -1,5 +1,5 @@
 ## Objetivo
-Asentar los fundamentos en el desarrollo de aplicaciones iOS.
+Asentar los **fundamentos de iOS** por medio del desarrollo de una aplicación basada en *Game of Thrones*.
 
 - Swift
 - Xcode
